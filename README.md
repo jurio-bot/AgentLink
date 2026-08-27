@@ -69,6 +69,15 @@ It demonstrates a conservative recovery rule for interrupted actions:
 
 The demo is intentionally separate from production AgentLink and contains no private infrastructure or authorization implementation.
 
+## Validated services and case study
+
+AgentLink is also turning selected verified capabilities into small paid engineering offers without publishing the private production core.
+
+- **[AI automation / RAG / agent service scopes](./SERVICES.md)**
+- **[RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md)** — 10 isolated agent configurations with routing, validation, health reporting, and **5 automated tests passed**
+
+The service page uses reference scopes rather than automatic contract terms. Public claims are limited to work that has implementation or test evidence.
+
 ## Company thesis
 
 AgentLink is also being developed around an **AI-native company** thesis: use the platform internally as the operating substrate for AI workers before commercializing selected capabilities externally.
@@ -158,7 +167,9 @@ See [SUPPORT.md](./SUPPORT.md) for the current support policy and ways to get in
 
 ## Contact
 
-For investment, partnership, sponsorship, patronage, or design-partner discussions, open a GitHub Issue with a non-confidential overview or contact the project owner through the GitHub profile associated with this repository.
+For investment, partnership, sponsorship, patronage, design-partner discussions, or a non-confidential automation / AI engineering inquiry, open a GitHub Issue or contact the project owner through the GitHub profile associated with this repository.
+
+Do not post credentials, API keys, personal data, proprietary datasets, or other confidential information in a public issue.
 
 ## Repository status
 
