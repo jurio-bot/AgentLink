@@ -2,6 +2,10 @@
 
 **Persistent, permissioned, recoverable execution infrastructure for AI workers.**
 
+> **Free starting point:** [AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)
+>
+> **DIY planning kit:** [AI Automation Quickstart Kit — ¥980](./DIGITAL_PRODUCTS.md)
+>
 > **Start small:** [AI Automation Opportunity Scan — ¥2,980](https://buy.stripe.com/14AdR8dBAd38g77f0TgEg06)
 >
 > **Need a technical second opinion?** [AI Agent / RAG Architecture Quick Audit — ¥9,800](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)
@@ -20,19 +24,27 @@ AgentLink is an early-stage AI execution platform exploring how AI agents can co
 
 AgentLink currently offers a low-friction path from first assessment to implementation:
 
-1. **AI Automation Opportunity Scan — ¥2,980**  
+0. **Free AI Automation Readiness Checklist**  
+   [Use the checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)  
+   A conservative 20-point preflight for workflow clarity, access, reliability, and business fit.
+
+1. **AI Automation Quickstart Kit — ¥980**  
+   [See the kit](./DIGITAL_PRODUCTS.md)  
+   DIY scorecard, PoC planning canvas, API preflight, reliability/recovery checklist, and ROI estimator.
+
+2. **AI Automation Opportunity Scan — ¥2,980**  
    [Buy now](https://buy.stripe.com/14AdR8dBAd38g77f0TgEg06)  
    Async review of one workflow or idea with automation candidates, difficulty, risks, and next actions.
 
-2. **AI Agent / RAG Architecture Quick Audit — ¥9,800**  
+3. **AI Agent / RAG Architecture Quick Audit — ¥9,800**  
    [Buy now](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)  
    Architecture review, risk checklist, quality/operability gaps, prioritized next steps, and implementation plan.
 
-3. **AI Automation Small PoC Starter — ¥29,800**  
+4. **AI Automation Small PoC Starter — ¥29,800**  
    [Buy now](https://buy.stripe.com/eVq9AS8hg8MS6wxbOHgEg07)  
    One narrow, non-production workflow: requirements, boundary definition, small executable prototype, basic validation, and handoff notes. Production deployment, ongoing operation, extra integrations, and large-scale data work are outside this fixed scope.
 
-4. **Larger Python / API / RAG / multi-agent PoCs**  
+5. **Larger Python / API / RAG / multi-agent PoCs**  
    See [SERVICES.md](./SERVICES.md) and [request a paid service or PoC](../../issues/new?template=paid-service-request.yml).
 
 ## Why AgentLink exists
