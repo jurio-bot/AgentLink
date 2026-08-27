@@ -2,7 +2,11 @@
 
 **Persistent, permissioned, recoverable execution infrastructure for AI workers.**
 
-> **Need a technical second opinion now?** [Buy the AI Agent / RAG Architecture Quick Audit — ¥9,800](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)
+> **Start small:** [AI Automation Opportunity Scan — ¥2,980](https://buy.stripe.com/14AdR8dBAd38g77f0TgEg06)
+>
+> **Need a technical second opinion?** [AI Agent / RAG Architecture Quick Audit — ¥9,800](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)
+>
+> **Want a working proof?** [AI Automation Small PoC Starter — ¥29,800](https://buy.stripe.com/eVq9AS8hg8MS6wxbOHgEg07)
 >
 > **Support AgentLink:** [Flexible project support](https://buy.stripe.com/7sYeVcbtsgfk6wxbOHgEg00) · [Supporter ¥500/mo](https://buy.stripe.com/00w6oG7dc9QW7ABg4XgEg01) · [Builder Patron ¥1,500/mo](https://buy.stripe.com/eVq14m4102oubQR6ungEg02) · [Infrastructure Patron ¥5,000/mo](https://buy.stripe.com/dRm6oG554d385stf0TgEg03)
 >
@@ -11,6 +15,25 @@
 AgentLink is an early-stage AI execution platform exploring how AI agents can continue useful work across computers, mobile/edge devices, cloud workers, and business services without losing execution state, authority boundaries, or recovery context.
 
 > This repository is a public product / technical showcase. The production core is private and is **not** published here.
+
+## Revenue-ready service ladder
+
+AgentLink currently offers a low-friction path from first assessment to implementation:
+
+1. **AI Automation Opportunity Scan — ¥2,980**  
+   [Buy now](https://buy.stripe.com/14AdR8dBAd38g77f0TgEg06)  
+   Async review of one workflow or idea with automation candidates, difficulty, risks, and next actions.
+
+2. **AI Agent / RAG Architecture Quick Audit — ¥9,800**  
+   [Buy now](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)  
+   Architecture review, risk checklist, quality/operability gaps, prioritized next steps, and implementation plan.
+
+3. **AI Automation Small PoC Starter — ¥29,800**  
+   [Buy now](https://buy.stripe.com/eVq9AS8hg8MS6wxbOHgEg07)  
+   One narrow, non-production workflow: requirements, boundary definition, small executable prototype, basic validation, and handoff notes. Production deployment, ongoing operation, extra integrations, and large-scale data work are outside this fixed scope.
+
+4. **Larger Python / API / RAG / multi-agent PoCs**  
+   See [SERVICES.md](./SERVICES.md) and [request a paid service or PoC](../../issues/new?template=paid-service-request.yml).
 
 ## Why AgentLink exists
 
@@ -79,7 +102,6 @@ The demo is intentionally separate from production AgentLink and contains no pri
 
 AgentLink is also turning selected verified capabilities into small paid engineering offers without publishing the private production core.
 
-- **[AI Agent / RAG Architecture Quick Audit — ¥9,800, buy now](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)**
 - **[AI automation / RAG / agent service scopes](./SERVICES.md)**
 - **[Request a paid service or PoC](../../issues/new?template=paid-service-request.yml)**
 - **[RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md)** — 10 isolated agent configurations with routing, validation, health reporting, and **5 automated tests passed**
