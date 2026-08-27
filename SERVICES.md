@@ -4,7 +4,26 @@ AgentLink offers selected AI automation, architecture, reliability review, and p
 
 This page is intentionally conservative: it describes work we can actually scope, prototype, test, review, and hand off. It does not claim customer outcomes that have not happened.
 
-## 1. AI Automation Opportunity Scan
+## 1. AI Automation Quickstart Kit
+
+**Fixed price: ¥980**
+
+**Buy now:** https://buy.stripe.com/3cIdR8cxw2ou8EFbOHgEg09
+
+A compact digital starter kit for deciding whether a workflow is worth automating and designing a small PoC without skipping reliability boundaries.
+
+Included:
+
+- automation suitability score
+- narrow PoC design template
+- API preflight checklist
+- reliability / recovery checklist
+- editable ROI calculator CSV
+- README with recommended order and usage boundaries
+
+The verified kit files are prepared for fulfillment. After a confirmed paid checkout, delivery guidance is sent to the email address used at checkout. These are planning templates, not a guarantee of cost savings, reliability, compliance, or business results.
+
+## 2. AI Automation Opportunity Scan
 
 **Fixed price: ¥2,980**
 
@@ -21,7 +40,7 @@ Typical deliverables:
 
 This tier is assessment only. Implementation is not included.
 
-## 2. AI Agent / RAG Architecture Quick Audit
+## 3. AI Agent / RAG Architecture Quick Audit
 
 **Fixed price: ¥9,800**
 
@@ -39,7 +58,7 @@ Typical deliverables:
 
 Implementation is not included at this tier.
 
-## 3. Agent Reliability & Recovery Review
+## 4. Agent Reliability & Recovery Review
 
 **Fixed price: ¥14,800**
 
@@ -57,7 +76,7 @@ Typical review areas:
 
 Implementation is not included at this tier.
 
-## 4. AI Automation / Small PoC Starter
+## 5. AI Automation / Small PoC Starter
 
 **Fixed price: ¥29,800**
 
@@ -73,7 +92,7 @@ Typical scope:
 
 Examples include Python utilities, API-connected workflow prototypes, prompt / agent routing proofs, and small internal automation helpers. Production deployment, ongoing operation, extra integrations, and large-scale data work are outside this fixed scope.
 
-## 5. Working Python / API / RAG PoC
+## 6. Working Python / API / RAG PoC
 
 **Reference price: ¥59,800**
 
@@ -87,7 +106,7 @@ Typical scope:
 
 Scope and final terms are confirmed before paid work begins.
 
-## 6. Multi-step AI Agent / RAG PoC
+## 7. Multi-step AI Agent / RAG PoC
 
 **Reference price: ¥98,000**
 
@@ -121,7 +140,7 @@ This is an engineering proof, not a claim that the simplified local retriever it
 
 ## How to buy or inquire
 
-The ¥2,980 / ¥9,800 / ¥14,800 / ¥29,800 offers can be purchased immediately through the Stripe links above.
+The ¥980 / ¥2,980 / ¥9,800 / ¥14,800 / ¥29,800 offers can be purchased immediately through the Stripe links above.
 
 For a larger PoC, open a GitHub Issue in this repository with a **non-confidential** description of:
 
@@ -141,6 +160,7 @@ AgentLinkでは、実際に検証済みの技術資産をベースに、AI業務
 
 現在オンライン決済できる固定価格メニュー:
 
+- AI Automation Quickstart Kit — **¥980**
 - AI Automation Opportunity Scan — **¥2,980**
 - AI Agent / RAG Architecture Quick Audit — **¥9,800**
 - Agent Reliability & Recovery Review — **¥14,800**
