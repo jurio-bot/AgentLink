@@ -39,6 +39,23 @@ Demonstrates:
 - safe re-claim by another worker
 - explicit job-state transitions
 
+### Reorder Drift Detector
+
+Path: `demos/reorder-drift-detector/`
+
+A dependency-light B2B automation proof for identifying accounts whose reorder cadence has drifted beyond their own historical pattern.
+
+Demonstrates:
+
+- order-history style input
+- per-account cadence estimation using median intervals
+- configurable drift thresholds
+- ranked alerts for overdue reorder behavior
+- a deterministic, testable core suitable for later CSV/ERP/n8n adapters
+- 3 deterministic checks passed before publication
+
+The demo uses no real ERP, credentials, or customer data.
+
 ## Case study
 
 ### RAG Fleet Harness MVP
