@@ -6,7 +6,9 @@ This page is intentionally conservative: it describes work we can actually scope
 
 ## 1. AI Agent / RAG Architecture Quick Audit
 
-**Reference price: ¥9,800**
+**Fixed price: ¥9,800**
+
+**Buy now:** https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05
 
 Good fit when you already have an AI-agent or RAG idea and want a concrete technical second opinion before building more.
 
@@ -18,7 +20,7 @@ Typical deliverables:
 - prioritized next steps
 - implementation plan
 
-Implementation is not included at this tier.
+Implementation is not included at this tier. After purchase, the support channel will request only the information needed for the review. Do not send passwords, API keys, private credentials, or unnecessary personal data.
 
 ## 2. AI Automation / Small PoC
 
@@ -88,7 +90,7 @@ Open a GitHub Issue in this repository with a **non-confidential** description o
 
 Please do not post passwords, API keys, personal data, proprietary datasets, or other confidential information in a public issue.
 
-Reference prices are starting points, not automatic contract terms. Scope and final terms must be confirmed before work begins.
+For the fixed-price Quick Audit, the live Stripe checkout above can be used immediately. Larger PoCs use reference prices as starting points and require scope confirmation before work begins.
 
 ---
 
@@ -96,6 +98,8 @@ Reference prices are starting points, not automatic contract terms. Scope and fi
 
 AgentLinkでは、実際に検証済みの技術資産をベースに、AI業務自動化、Python/API連携、RAG・AI AgentのPoC、設計レビューを提供します。
 
-公開ページでは、未検証の実績や架空の導入効果は記載しません。
+**AI Agent / RAG Architecture Quick Audit（¥9,800）は現在オンライン決済で購入可能です。**
 
-相談はこのリポジトリのGitHub Issueから、機密情報を含めずに概要だけお送りください。
+購入: https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05
+
+公開ページでは、未検証の実績や架空の導入効果は記載しません。より大きなPoCは、機密情報を含めずGitHub Issueから概要をご相談ください。
