@@ -9,6 +9,7 @@ Use the free resources before buying anything:
 - **[AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)** — a 20-point pre-check for workflow clarity, data/access, reliability planning, and business fit.
 - **[AI Automation PoC Acceptance Template](./FREE_AI_AUTOMATION_POC_ACCEPTANCE_TEMPLATE.md)** — define evidence-based acceptance criteria before implementation starts.
 - **[AI Agent Failure-Recovery Checklist](./FREE_AI_AGENT_FAILURE_RECOVERY_CHECKLIST.md)** — check duplicate safety, receipts, uncertain outcomes, stale workers, and recovery drills.
+- **[AI Automation Incident Receipt Template](./FREE_AI_AUTOMATION_INCIDENT_RECEIPT_TEMPLATE.md)** — capture evidence, side-effect certainty, recovery decisions, and final receipts after failures or timeouts.
 
 If those expose gaps and you want the complete planning pack, continue with the paid kit below.
 
