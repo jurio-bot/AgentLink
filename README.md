@@ -126,12 +126,25 @@ See [ROADMAP.md](./ROADMAP.md).
 
 - enterprise design partners with a safe, measurable AI-agent workload
 - AI infrastructure / enterprise software investors
+- individual patrons and long-term supporters
+- corporate sponsors and strategic patrons
 - cloud / compute / model ecosystem partners
+- hardware, GPU, cloud-credit, and security-review support
 - technical collaborators interested in reliable agent execution
+
+## Support, patronage, and sponsorship
+
+AgentLink welcomes interest from people and organizations that want to help fund or resource the project while keeping the production core private and independent.
+
+Support can include patronage, corporate sponsorship, cloud / GPU credits, hardware, security or legal support, introductions, and design-partner collaboration.
+
+A formal financial contribution channel will be published only after the appropriate legal and accounting setup is ready. We do **not** currently claim that support is a tax-deductible charitable donation.
+
+See [SUPPORT.md](./SUPPORT.md) for the current support policy and ways to get involved.
 
 ## Contact
 
-For investment, partnership, or design-partner discussions, open a GitHub Discussion / Issue when enabled, or contact the project owner through the GitHub profile associated with this repository.
+For investment, partnership, sponsorship, patronage, or design-partner discussions, open a GitHub Issue with a non-confidential overview or contact the project owner through the GitHub profile associated with this repository.
 
 ## Repository status
 
