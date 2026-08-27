@@ -10,6 +10,7 @@ Use the free resources before buying anything:
 - **[AI Automation PoC Acceptance Template](./FREE_AI_AUTOMATION_POC_ACCEPTANCE_TEMPLATE.md)** — define evidence-based acceptance criteria before implementation starts.
 - **[AI Agent Failure-Recovery Checklist](./FREE_AI_AGENT_FAILURE_RECOVERY_CHECKLIST.md)** — check duplicate safety, receipts, uncertain outcomes, stale workers, and recovery drills.
 - **[AI Automation Incident Receipt Template](./FREE_AI_AUTOMATION_INCIDENT_RECEIPT_TEMPLATE.md)** — capture evidence, side-effect certainty, recovery decisions, and final receipts after failures or timeouts.
+- **[AI Automation Retry Decision Tree](./free/ai-automation-retry-decision-tree.md)** — decide when an interrupted automation should skip, retry, reconcile, or stop for human review.
 
 If those expose gaps and you want the complete planning pack, continue with the paid kit below.
 
