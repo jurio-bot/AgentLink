@@ -2,7 +2,9 @@
 
 **Persistent, permissioned, recoverable execution infrastructure for AI workers.**
 
-> **Support AgentLink now:** [Flexible project support](https://buy.stripe.com/7sYeVcbtsgfk6wxbOHgEg00) · [Supporter ¥500/mo](https://buy.stripe.com/00w6oG7dc9QW7ABg4XgEg01) · [Builder Patron ¥1,500/mo](https://buy.stripe.com/eVq14m4102oubQR6ungEg02) · [Infrastructure Patron ¥5,000/mo](https://buy.stripe.com/dRm6oG554d385stf0TgEg03)
+> **Need a technical second opinion now?** [Buy the AI Agent / RAG Architecture Quick Audit — ¥9,800](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)
+>
+> **Support AgentLink:** [Flexible project support](https://buy.stripe.com/7sYeVcbtsgfk6wxbOHgEg00) · [Supporter ¥500/mo](https://buy.stripe.com/00w6oG7dc9QW7ABg4XgEg01) · [Builder Patron ¥1,500/mo](https://buy.stripe.com/eVq14m4102oubQR6ungEg02) · [Infrastructure Patron ¥5,000/mo](https://buy.stripe.com/dRm6oG554d385stf0TgEg03)
 >
 > Support is non-equity project/patron support. It does not provide shares, investment returns, tokens, tax-deductible charitable treatment, exclusivity, or rights to AgentLink core IP.
 
@@ -77,10 +79,12 @@ The demo is intentionally separate from production AgentLink and contains no pri
 
 AgentLink is also turning selected verified capabilities into small paid engineering offers without publishing the private production core.
 
+- **[AI Agent / RAG Architecture Quick Audit — ¥9,800, buy now](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)**
 - **[AI automation / RAG / agent service scopes](./SERVICES.md)**
+- **[Request a paid service or PoC](../../issues/new?template=paid-service-request.yml)**
 - **[RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md)** — 10 isolated agent configurations with routing, validation, health reporting, and **5 automated tests passed**
 
-The service page uses reference scopes rather than automatic contract terms. Public claims are limited to work that has implementation or test evidence.
+Public claims are limited to work that has implementation or test evidence. Larger PoCs require scope confirmation before work begins.
 
 ## Company thesis
 
