@@ -2,13 +2,15 @@
 
 Small, practical digital tools and templates built around reliable AI automation and software delivery.
 
-## Start free: AI Automation Readiness Checklist
+## Start free
 
-Not sure whether a workflow is ready to automate yet? Use the free 20-point pre-check first:
+Use the free resources before buying anything:
 
-**[Open the free checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)**
+- **[AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)** — a 20-point pre-check for workflow clarity, data/access, reliability planning, and business fit.
+- **[AI Automation PoC Acceptance Template](./FREE_AI_AUTOMATION_POC_ACCEPTANCE_TEMPLATE.md)** — define evidence-based acceptance criteria before implementation starts.
+- **[AI Agent Failure-Recovery Checklist](./FREE_AI_AGENT_FAILURE_RECOVERY_CHECKLIST.md)** — check duplicate safety, receipts, uncertain outcomes, stale workers, and recovery drills.
 
-It helps identify whether the workflow, data/access, reliability plan, and business case are clear enough for a narrow PoC.
+If those expose gaps and you want the complete planning pack, continue with the paid kit below.
 
 ## AI Automation Quickstart Kit — ¥980
 
