@@ -55,6 +55,20 @@ The private implementation currently spans several directions, including:
 
 Only claims that can be backed by implementation evidence are used in external discussions.
 
+## First public technical demo
+
+A deliberately simplified, standalone reliability demo is now public:
+
+**[Receipt Replay Simulator](./demos/receipt-replay-simulator/)**
+
+It demonstrates a conservative recovery rule for interrupted actions:
+
+- completed receipt → skip duplicate execution
+- not-started receipt → retry
+- uncertain receipt → reconcile instead of blindly replaying
+
+The demo is intentionally separate from production AgentLink and contains no private infrastructure or authorization implementation.
+
 ## Company thesis
 
 AgentLink is also being developed around an **AI-native company** thesis: use the platform internally as the operating substrate for AI workers before commercializing selected capabilities externally.
