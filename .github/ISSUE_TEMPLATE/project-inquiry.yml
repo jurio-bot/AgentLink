@@ -1,0 +1,57 @@
+name: Project inquiry
+description: Non-confidential inquiry for AI automation, Python/API, RAG, or agent PoC work
+title: "[Inquiry] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reaching out. Please keep this public issue non-confidential. Do not include passwords, API keys, personal data, client secrets, or proprietary datasets.
+  - type: dropdown
+    id: work_type
+    attributes:
+      label: What kind of work are you considering?
+      options:
+        - AI workflow / business automation
+        - Python / API integration
+        - RAG proof-of-concept
+        - AI Agent / multi-step workflow PoC
+        - Architecture / technical audit
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to improve or automate?
+      description: Describe the problem and desired outcome without confidential information.
+    validations:
+      required: true
+  - type: textarea
+    id: current_stack
+    attributes:
+      label: Current tools or data sources
+      description: Public/non-sensitive overview only.
+  - type: textarea
+    id: output
+    attributes:
+      label: Desired deliverable
+      description: What would a useful result look like?
+    validations:
+      required: true
+  - type: input
+    id: timing
+    attributes:
+      label: Timing / urgency
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Security, deployment, or operating constraints
+      description: Do not include secrets or private endpoints.
+  - type: checkboxes
+    id: public_ack
+    attributes:
+      label: Public issue acknowledgment
+      options:
+        - label: I understand this issue is public and I have not included secrets or confidential data.
+          required: true
