@@ -1,0 +1,26 @@
+PUBLIC SHOWROOM ALLOWLIST — 2026-08-27
+
+Only these files are approved for the first public AgentLink showcase publication:
+
+README.md
+ARCHITECTURE.md
+POC.md
+TECHNICAL_PROOFS.md
+SECURITY.md
+ROADMAP.md
+NOTICE.md
+PUBLISH_MANIFEST.txt
+
+Source directory:
+public_showcase/AgentLink/
+
+Publication rule:
+- Copy only allowlisted files from this directory into a clean temporary repository.
+- Do not preserve parent .git history.
+- Do not copy symlinks.
+- Do not copy hidden files.
+- Do not copy any production source tree.
+- Do not copy credentials, environment files, private URLs, hostnames, network configuration, user/customer data, or internal runbooks.
+- Public target repository: jurio-bot/AgentLink, only if that repository does not already exist.
+- Target visibility: public.
+- Initial publication is documentation/showcase only.
