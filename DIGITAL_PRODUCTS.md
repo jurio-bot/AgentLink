@@ -2,6 +2,14 @@
 
 Small, practical digital tools and templates built around reliable AI automation and software delivery.
 
+## Start free: AI Automation Readiness Checklist
+
+Not sure whether a workflow is ready to automate yet? Use the free 20-point pre-check first:
+
+**[Open the free checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)**
+
+It helps identify whether the workflow, data/access, reliability plan, and business case are clear enough for a narrow PoC.
+
 ## AI Automation Quickstart Kit — ¥980
 
 **Buy now:** https://buy.stripe.com/3cIdR8cxw2ou8EFbOHgEg09
