@@ -8,7 +8,7 @@ We welcome support from individuals, patrons, companies, cloud providers, resear
 
 ### Individual supporters / patrons
 
-Individuals can express interest in supporting AgentLink as a patron or recurring supporter.
+Individuals can support AgentLink as a patron or recurring supporter.
 
 Support may be used toward:
 
@@ -20,7 +20,16 @@ Support may be used toward:
 - third-party onboarding experiments
 - reliability and failure-injection testing
 
-A formal payment channel will be published only after the appropriate account, legal, accounting, and identity setup is ready.
+The initial patron structure being prepared is:
+
+- **Supporter** — JPY 500 / month
+- **Builder Patron** — JPY 1,500 / month
+- **Infrastructure Patron** — JPY 5,000 / month
+- **Flexible project support** — supporter chooses the amount, planned minimum JPY 500
+
+The Stripe Live products for these support paths have been prepared, but the checkout links will not be published until the payment account finishes identity/business verification and can legally accept live charges.
+
+These are non-equity support tiers. They do not provide shares, investment returns, tokens, tax-deductible charitable treatment, exclusivity, or rights to AgentLink core IP.
 
 ### Corporate sponsors
 
@@ -69,14 +78,22 @@ Supporter benefits will depend on the support type and any applicable agreement.
 
 No equity, token, investment return, tax deduction, product guarantee, exclusivity, or IP right is implied by informal support or public recognition.
 
+## Payment status
+
+The project has a Stripe Live account and the initial support products have been configured. Live charges are not yet enabled because the account still requires business / representative verification, payout bank details, Japanese compliance information, and acceptance of the applicable Stripe terms.
+
+No non-working checkout URL will be published. Once the account is verified, the hosted payment links can be created and linked here and from the main README.
+
+GitHub Sponsors is also being prepared as a second patron rail, subject to GitHub's identity, banking, tax, and account approval process.
+
 ## Important legal / accounting note
 
-AgentLink is currently being structured as a project and future company. Until a formal support/payment channel is published, this repository is collecting **support and sponsorship interest**, not representing that contributions are tax-deductible charitable donations.
+AgentLink is currently being structured as a project and future company. This support program is **not** presented as a tax-deductible charitable donation program.
 
-Any financial contribution will be accepted only through an appropriate documented channel with the necessary legal and accounting treatment.
+Financial support will be accepted only through an appropriate documented channel with the necessary legal and accounting treatment. Corporate sponsorships involving deliverables, commercial rights, exclusivity, or procurement should use a separate written agreement rather than an informal patron tier.
 
 ## Interested in supporting AgentLink?
 
-Open a public Issue with a non-confidential note, or contact the project owner through the GitHub profile associated with this repository.
+Open public Issue #2 with a non-confidential note, or contact the project owner through the GitHub profile associated with this repository.
 
 For confidential sponsorship, investment, or strategic-partner discussions, please avoid posting sensitive commercial information in a public Issue.
