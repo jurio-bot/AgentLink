@@ -2,6 +2,10 @@
 
 **Persistent, permissioned, recoverable execution infrastructure for AI workers.**
 
+> **Support AgentLink now:** [Flexible project support](https://buy.stripe.com/7sYeVcbtsgfk6wxbOHgEg00) · [Supporter ¥500/mo](https://buy.stripe.com/00w6oG7dc9QW7ABg4XgEg01) · [Builder Patron ¥1,500/mo](https://buy.stripe.com/eVq14m4102oubQR6ungEg02) · [Infrastructure Patron ¥5,000/mo](https://buy.stripe.com/dRm6oG554d385stf0TgEg03)
+>
+> Support is non-equity project/patron support. It does not provide shares, investment returns, tokens, tax-deductible charitable treatment, exclusivity, or rights to AgentLink core IP.
+
 AgentLink is an early-stage AI execution platform exploring how AI agents can continue useful work across computers, mobile/edge devices, cloud workers, and business services without losing execution state, authority boundaries, or recovery context.
 
 > This repository is a public product / technical showcase. The production core is private and is **not** published here.
@@ -157,13 +161,18 @@ See [ROADMAP.md](./ROADMAP.md).
 
 ## Support, patronage, and sponsorship
 
-AgentLink welcomes interest from people and organizations that want to help fund or resource the project while keeping the production core private and independent.
+Live support channels are open:
 
-Support can include patronage, corporate sponsorship, cloud / GPU credits, hardware, security or legal support, introductions, and design-partner collaboration.
+- **Flexible project support:** [choose an amount](https://buy.stripe.com/7sYeVcbtsgfk6wxbOHgEg00)
+- **Supporter:** [¥500 / month](https://buy.stripe.com/00w6oG7dc9QW7ABg4XgEg01)
+- **Builder Patron:** [¥1,500 / month](https://buy.stripe.com/eVq14m4102oubQR6ungEg02)
+- **Infrastructure Patron:** [¥5,000 / month](https://buy.stripe.com/dRm6oG554d385stf0TgEg03)
 
-A formal financial contribution channel will be published only after the appropriate legal and accounting setup is ready. We do **not** currently claim that support is a tax-deductible charitable donation.
+AgentLink also welcomes corporate sponsorship, cloud / GPU credits, hardware, security or legal support, introductions, and design-partner collaboration.
 
-See [SUPPORT.md](./SUPPORT.md) for the current support policy and ways to get involved.
+These channels are for non-equity support. They are not presented as charitable donations and do not imply tax deductibility, equity, investment returns, tokens, exclusivity, or rights to AgentLink core IP.
+
+See [SUPPORT.md](./SUPPORT.md) for details.
 
 ## Contact
 
