@@ -39,6 +39,25 @@ Demonstrates:
 - safe re-claim by another worker
 - explicit job-state transitions
 
+### Reliable API Job Orchestrator
+
+Path: `demos/reliable-api-job-orchestrator/`
+
+A dependency-light backend reliability proof for API-backed AI and automation platforms.
+
+Demonstrates:
+
+- deterministic job identity from idempotency keys
+- duplicate submit suppression
+- worker ownership leases
+- active-lease conflict prevention
+- stale-worker recovery after lease expiry
+- completion guarded by a valid lease
+- stable completion receipts
+- **5 local unit tests passed before publication**
+
+This is a standalone engineering proof, not a claim of production customer deployment or cloud infrastructure experience.
+
 ### Reorder Drift Detector
 
 Path: `demos/reorder-drift-detector/`
