@@ -16,6 +16,18 @@ A practical guide to preventing duplicate external actions during retries, resum
 
 - [Read: AIエージェントの二重実行を防ぐ](./ai-agent-idempotency-safety.md)
 
+### AI Agent Unknown-Outcome Recovery
+
+What to do when a local run failed but the external side effect may already have happened. Covers explicit unknown states, read-back reconciliation, provider-side receipts, and safe resume behavior.
+
+- [Read: AI Agent Unknown-Outcome Recovery](./ai-agent-unknown-outcome-recovery.md)
+
+### AI Agent Production Readiness Checklist
+
+A compact checklist for deciding whether an agent workflow is ready to move beyond a successful demo into repeatable operation.
+
+- [Read: AI Agent Production Readiness Checklist](./ai-agent-production-readiness-checklist.md)
+
 ### AI Agent Incident Recovery Runbook
 
 A provider-neutral incident flow for freezing affected writes, classifying side effects, reconciling uncertain outcomes, restoring from trustworthy checkpoints, re-establishing ownership, and resuming only unfinished work.
