@@ -108,6 +108,15 @@ Verified public claims include:
 
 ## Paid services
 
+<!-- revenue-idempotency: lowticket-traffic-AL-CHK-001-portfolio-v1 -->
+### AI Automation Safety Checklist — ¥500
+
+A low-cost downloadable starter for preventing duplicate execution, separating human approval boundaries, planning recovery, and keeping receipts/logs in AI automation workflows.
+
+Details: [products/AL-CHK-001.md](./products/AL-CHK-001.md)
+
+Buy: https://buy.stripe.com/4gM3cu410bZ45staKDgEg0d
+
 ### AI Automation Opportunity Scan — ¥2,980
 
 Asynchronous review of one workflow or automation idea with candidate automations, difficulty, risks, and next actions.
