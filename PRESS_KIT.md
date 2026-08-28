@@ -1,6 +1,6 @@
 # AgentLink Press Kit
 
-Last updated: 2026-08-28
+Last updated: 2026-08-29
 
 AgentLink is an early-stage project exploring persistent, permissioned, recoverable execution infrastructure for AI workers.
 
@@ -18,9 +18,9 @@ AI models can reason and use tools, but operational work becomes fragile when se
 
 - [Receipt Replay Simulator](./demos/receipt-replay-simulator/) — a standalone demo of conservative retry/reconcile behavior that avoids blindly replaying uncertain external actions.
 - [RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md) — 10 isolated agent configurations with routing, validation, health reporting, and 5 automated tests passed.
-- [Technical proofs](./TECHNICAL_PROOFS.md) — public reliability-oriented demos and implementation evidence.
+- [Technical proof inventory](./TECHNICAL_PROOFS.md) — a boundary-aware inventory of evidence categories that exist in the private development environment and the stronger public measurements still worth publishing.
 - [Architecture overview](./ARCHITECTURE.md) — the public system model and design boundaries.
-- [Portfolio](./PORTFOLIO.md) — selected public work and proof artifacts.
+- [Portfolio](./PORTFOLIO.md) — selected public demos, tools, case studies, image-workflow proof, and other reproducible artifacts.
 - [Services](./SERVICES.md) — scoped AI automation, API, RAG, and agent-engineering offers.
 
 The production AgentLink core remains private. Public material does not expose credentials, private endpoints, customer data, or sensitive authorization implementation.
