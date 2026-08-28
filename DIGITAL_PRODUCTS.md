@@ -16,7 +16,13 @@ Use the free resources before buying anything:
 
 The free catalog is intentionally broader than AI-only workflows: practical data-quality and work-operations utilities are welcome when they are genuinely useful and independently testable.
 
-If the AI automation resources expose gaps and you want the complete planning pack, continue with the paid kit below.
+## Freelance Job Tracker Kit — ¥780
+
+**[See details](./products/FREELANCE_JOB_TRACKER_KIT.md)** · **Buy now:** https://buy.stripe.com/bJe14mcxw5AGg772e7gEg0a
+
+A lightweight CSV + Markdown pack for managing applications, client chats, deadlines, delivery checks, follow-ups, and text-first client communication without requiring a paid SaaS subscription.
+
+Useful for writers, researchers, assistants, data-entry workers, developers, designers, and other freelancers working through marketplaces or direct contracts.
 
 ## AI Automation Quickstart Kit — ¥980
 
