@@ -56,6 +56,8 @@ Typical deliverables:
 - prioritized next steps
 - implementation plan
 
+The review can include traceability gaps such as missing run IDs, source IDs, agent/corpus boundaries, validation, and health signals when they are relevant to the system under review.
+
 Implementation is not included at this tier.
 
 ## 4. Agent Reliability & Recovery Review
@@ -138,6 +140,12 @@ The MVP deliberately keeps vector-store and model-provider dependencies outside 
 
 This is an engineering proof, not a claim that the simplified local retriever itself is a production RAG stack.
 
+Related public proof:
+
+- [RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md)
+- [Debuggable RAG Operations](./guides/debuggable-rag-operations.md) — practical guidance for source IDs, run IDs, isolation, validation, and health
+- [RAG Trace Check](./tools/rag_trace_check.py) — dependency-free trace validator with a public unit-test suite
+
 ## How to buy or inquire
 
 The ¥980 / ¥2,980 / ¥9,800 / ¥14,800 / ¥29,800 offers can be purchased immediately through the Stripe links above.
@@ -165,5 +173,7 @@ AgentLinkでは、実際に検証済みの技術資産をベースに、AI業務
 - AI Agent / RAG Architecture Quick Audit — **¥9,800**
 - Agent Reliability & Recovery Review — **¥14,800**
 - AI Automation / Small PoC Starter — **¥29,800**
+
+RAG関連では、公開済みのRAG Fleet Harnessケーススタディ、Debuggable RAG Operationsガイド、RAG Trace Check CLIから、実際に重視しているrun ID / source ID / agent分離 / validation / healthの考え方を事前に確認できます。
 
 公開ページでは、未検証の実績や架空の導入効果は記載しません。より大きなPoCは、機密情報を含めずGitHub Issueから概要をご相談ください。
