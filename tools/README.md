@@ -1,6 +1,20 @@
-# AgentLink Public Reliability Tools
+# AgentLink Public Tools
 
-Small, dependency-free utilities that demonstrate conservative automation-recovery patterns without exposing AgentLink's private production core.
+Small, dependency-free utilities published as practical, testable building blocks. They are intentionally standalone and do not expose AgentLink's private production core.
+
+## CSV Doctor
+
+[`csv-doctor/`](./csv-doctor/) diagnoses common CSV/TSV delivery problems before a file reaches a client or downstream system.
+
+It checks issues such as:
+
+- encoding and delimiter detection
+- blank rows
+- duplicate rows
+- inconsistent column counts
+- basic structural quality signals
+
+Run it with ordinary Python; no third-party package is required. The directory includes unit tests and its own README/quick start.
 
 ## Retry Guard
 
