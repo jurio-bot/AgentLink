@@ -24,6 +24,20 @@ python3 demo.py
 
 Expected output shows how the same recovery routine makes different decisions depending on the durable receipt state.
 
+## Test
+
+```bash
+python3 -m unittest -v
+```
+
+The public test suite verifies all three recovery branches:
+
+1. `completed` skips an already-completed action
+2. `not_started` permits a retry
+3. `uncertain` requires reconciliation instead of blind replay
+
+The current three-test suite passes against the public simulator code.
+
 ## What this demonstrates
 
 - stable action identity
