@@ -1,7 +1,8 @@
 <!-- revenue-idempotency: lowticket-publish-AL-CHK-001-github-v1 -->
+<!-- revenue-checkout-idempotency: lowticket-connect-AL-CHK-001-stripe-github-v1 -->
 # AI自動化 事故防止チェックリスト
 
-予定価格: ¥500
+価格: ¥500
 
 AI自動化や AI Agent / RAG を、小さく安全に始めるための実務向けチェックリストです。
 公開・検証済みの AgentLink の reliability / recovery 設計知見をベースにし、未検証の顧客成果や架空実績は含みません。
@@ -33,6 +34,10 @@ AI自動化や AI Agent / RAG を、小さく安全に始めるための実務�
 
 `AL-CHK-001-ai-safety-checklist-v1.zip` として、README、pre-flight checklist、incident recovery flow、idempotency log CSV、automation boundary template、quick example をまとめています。
 
-## 販売状況
+## 購入
 
-商品ページを先行公開しています。決済・自動配布ページは、利用可能な販売面の確認後に接続します。現時点ではこの GitHub ページ上で決済や機密情報の受け渡しは行いません。
+**¥500 / 1回払い** です。Stripe のホスト型決済ページから購入できます。
+
+[AI自動化 事故防止チェックリストを購入する（¥500）](https://buy.stripe.com/4gM3cu410bZ45staKDgEg0d)
+
+決済確認後、購入時のメールアドレスへ ZIP をお送りします。決済前に機密情報の提出は不要です。
