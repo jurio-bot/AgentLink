@@ -40,6 +40,12 @@ A practical way to distinguish a broken remote shell environment from an actuall
 
 - [Read: Debugging systemd user services from remote shells](./systemd-user-service-remote-shell-debugging.md)
 
+### ComfyUI Character Consistency and Composition
+
+A practical workflow for separating identity, pose, outfit, and composition controls so character-consistency experiments are easier to reproduce and debug. Includes evidence boundaries from local self-produced tests and explicitly documents observed reference-guidance drift.
+
+- [Read: ComfyUI Character Consistency](./comfyui-character-consistency-composition.md)
+
 ### AI Agent Incident Recovery Runbook
 
 A provider-neutral incident flow for freezing affected writes, classifying side effects, reconciling uncertain outcomes, restoring from trustworthy checkpoints, re-establishing ownership, and resuming only unfinished work.
