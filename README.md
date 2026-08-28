@@ -6,6 +6,8 @@
 >
 > **For spreadsheet delivery:** [Spreadsheet QA Kit — ¥580](./products/SPREADSHEET_QA_KIT.md)
 >
+> **For research & fact-checking:** [Research Source Log Kit — ¥480](./products/RESEARCH_SOURCE_LOG_KIT.md)
+>
 > **Free starting point:** [AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)
 >
 > **DIY planning kit:** [AI Automation Quickstart Kit — ¥980](./DIGITAL_PRODUCTS.md)
@@ -30,6 +32,7 @@ These lightweight products are intentionally useful outside AI engineering work 
 
 - **[Freelance Job Tracker Kit — ¥780](./products/FREELANCE_JOB_TRACKER_KIT.md)** — track applications, client chats, deadlines, delivery state, and follow-ups across multiple freelance platforms.
 - **[Spreadsheet QA Kit — ¥580](./products/SPREADSHEET_QA_KIT.md)** — pre-handoff checks and a simple delivery/revision log for CSV, Excel, and Google Sheets work.
+- **[Research Source Log Kit — ¥480](./products/RESEARCH_SOURCE_LOG_KIT.md)** — source log, fact-check checklist, and evidence-aware handoff template for research, writing, and virtual-assistant work.
 - **[CSV Doctor — free OSS](./tools/csv-doctor/)** — zero-dependency Python CLI for common CSV/TSV structural checks before handoff.
 
 The paid kits are delivered after verified successful Stripe payment. They are workflow aids and do not guarantee income, client acceptance, or business outcomes.
