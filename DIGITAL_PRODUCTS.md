@@ -1,6 +1,6 @@
 # AgentLink Digital Products
 
-Small, practical digital tools and templates built around reliable AI automation and software delivery.
+Small, practical digital tools and templates for reliable automation, software delivery, data quality, and everyday freelance operations.
 
 ## Start free
 
@@ -12,8 +12,11 @@ Use the free resources before buying anything:
 - **[AI Automation Incident Receipt Template](./FREE_AI_AUTOMATION_INCIDENT_RECEIPT_TEMPLATE.md)** — capture evidence, side-effect certainty, recovery decisions, and final receipts after failures or timeouts.
 - **[AI Automation Retry Decision Tree](./free/ai-automation-retry-decision-tree.md)** — decide when an interrupted automation should skip, retry, reconcile, or stop for human review.
 - **[Retry Guard OSS CLI](./tools/README.md)** — dependency-free executable classifier that turns receipt/incident JSON into `SKIP_COMPLETED`, `RETRY`, `RECONCILE`, or `HUMAN_REVIEW`, with unit tests and no external API calls.
+- **[CSV Doctor](./tools/csv-doctor/README.md)** — zero-dependency CSV/TSV quality checker for blank rows, exact duplicates, encoding/delimiter detection, and inconsistent column counts; optional cleaned-copy output never modifies the source file.
 
-If those expose gaps and you want the complete planning pack, continue with the paid kit below.
+The free catalog is intentionally broader than AI-only workflows: practical data-quality and work-operations utilities are welcome when they are genuinely useful and independently testable.
+
+If the AI automation resources expose gaps and you want the complete planning pack, continue with the paid kit below.
 
 ## AI Automation Quickstart Kit — ¥980
 
@@ -46,4 +49,4 @@ For hands-on reviews or implementation, see [SERVICES.md](./SERVICES.md).
 
 ---
 
-More digital products are being prepared. Product claims are limited to the actual contents delivered; we do not fabricate customer results, adoption numbers, or reviews.
+More digital products are being prepared across AI automation, data quality, freelance workflow, and practical productivity. Product claims are limited to the actual contents delivered; we do not fabricate customer results, adoption numbers, installs, stars, or reviews.
