@@ -1,20 +1,22 @@
 name: Paid service request
-about: Request a non-confidential AgentLink audit or PoC
+about: Request a non-confidential AgentLink review, audit, or PoC
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for your interest in AgentLink. Please share only non-confidential information here. Do not post credentials, API keys, personal data, proprietary datasets, private URLs, or security-sensitive details.
+        Thanks for your interest in AgentLink. Please share only non-confidential information here. Do not post credentials, API keys, personal data, proprietary datasets, private URLs, contracts, or security-sensitive details.
   - type: dropdown
     id: service
     attributes:
       label: Service
       options:
+        - AI Automation Opportunity Scan (¥2,980 fixed)
         - AI Agent / RAG Architecture Quick Audit (¥9,800 fixed)
-        - AI Automation / Small PoC (from ¥29,800)
-        - Working Python / API / RAG PoC (from ¥59,800)
-        - Multi-step AI Agent / RAG PoC (from ¥98,000)
+        - Agent Reliability & Recovery Review (¥14,800 fixed)
+        - AI Automation / Small PoC Starter (¥29,800 fixed)
+        - Working Python / API / RAG PoC (reference ¥59,800)
+        - Multi-step AI Agent / RAG PoC (reference ¥98,000)
         - Enterprise design-partner PoC
         - Other
     validations:
@@ -30,7 +32,7 @@ body:
     id: tools
     attributes:
       label: Current tools / data sources
-      description: Names of products or general data types are enough. Do not include credentials or private URLs.
+      description: Names of products or general data types are enough. Do not include credentials, customer data, or private URLs.
   - type: textarea
     id: outcome
     attributes:
@@ -45,10 +47,11 @@ body:
     id: constraints
     attributes:
       label: Security / deployment constraints
+      description: Describe constraints at a high level. Do not disclose secret architecture, credentials, or private endpoints.
   - type: checkboxes
     id: consent
     attributes:
       label: Safety check
       options:
-        - label: I confirm this issue contains no credentials, secrets, private customer data, or other confidential information.
+        - label: I confirm this issue contains no credentials, secrets, private customer data, contracts, or other confidential information.
           required: true
