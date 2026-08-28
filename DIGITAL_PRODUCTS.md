@@ -11,6 +11,7 @@ Use the free resources before buying anything:
 - **[AI Agent Failure-Recovery Checklist](./FREE_AI_AGENT_FAILURE_RECOVERY_CHECKLIST.md)** — check duplicate safety, receipts, uncertain outcomes, stale workers, and recovery drills.
 - **[AI Automation Incident Receipt Template](./FREE_AI_AUTOMATION_INCIDENT_RECEIPT_TEMPLATE.md)** — capture evidence, side-effect certainty, recovery decisions, and final receipts after failures or timeouts.
 - **[AI Automation Retry Decision Tree](./free/ai-automation-retry-decision-tree.md)** — decide when an interrupted automation should skip, retry, reconcile, or stop for human review.
+- **[Retry Guard OSS CLI](./tools/README.md)** — dependency-free executable classifier that turns receipt/incident JSON into `SKIP_COMPLETED`, `RETRY`, `RECONCILE`, or `HUMAN_REVIEW`, with unit tests and no external API calls.
 
 If those expose gaps and you want the complete planning pack, continue with the paid kit below.
 
