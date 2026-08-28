@@ -24,6 +24,12 @@ A lightweight CSV + Markdown pack for managing applications, client chats, deadl
 
 Useful for writers, researchers, assistants, data-entry workers, developers, designers, and other freelancers working through marketplaces or direct contracts.
 
+## Spreadsheet QA Kit — ¥580
+
+**[See details](./products/SPREADSHEET_QA_KIT.md)** · **Buy now:** https://buy.stripe.com/3cIeVc2WW4wC6wx4mfgEg0b
+
+A checklist + handoff-log pack for safer CSV, Excel, and Google Sheets delivery. It pairs with the free CSV Doctor CLI and targets data-entry, research, ecommerce, assistant, and spreadsheet-heavy workflows.
+
 ## AI Automation Quickstart Kit — ¥980
 
 **Buy now:** https://buy.stripe.com/3cIdR8cxw2ou8EFbOHgEg09
