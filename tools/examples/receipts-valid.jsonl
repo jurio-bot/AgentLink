@@ -1,0 +1,3 @@
+{"idempotency_key":"send-summary-client-a-v1","status":"completed","provider_object_id":"msg-1001"}
+{"idempotency_key":"publish-report-week-35-v1","status":"succeeded","provider_object_id":"commit-abc123"}
+{"idempotency_key":"prepare-draft-client-b-v1","status":"pending"}
