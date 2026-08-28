@@ -1,6 +1,6 @@
 # AgentLink Portfolio
 
-This page is the public portfolio index for AgentLink's verified technical demos, case studies, and paid engineering offers.
+This page is the public portfolio index for AgentLink's verified technical demos, case studies, tools, guides, and paid engineering offers.
 
 The production AgentLink core remains private. Public examples are deliberately standalone and avoid exposing private authorization, infrastructure, credentials, customer data, or internal runbooks.
 
@@ -17,7 +17,7 @@ Good first engagements include:
 
 For Japanese teams: **AI自動化・Python/API連携・RAG・AIエージェントの小規模PoC／技術検証を、業務委託・小さな有償トライアルから対応可能です。** 未確認の商用実績や顧客成果は誇張せず、公開デモとテストで確認できる範囲を起点に進めます。
 
-Fixed-price starting points and larger PoC scopes are listed below. For non-confidential inquiries, use the repository's Paid Service Request issue form.
+Fixed-price starting points and larger PoC scopes are listed below. For non-confidential inquiries, use the repository's [Paid Service Request](../../issues/new?template=paid-service-request.yml) or [Project Inquiry](../../issues/new?template=project-inquiry.yml) form.
 
 ## Technical demos
 
@@ -90,6 +90,30 @@ Demonstrates:
 
 The demo uses no real ERP, credentials, or customer data.
 
+## Public reliability tools
+
+### Receipt Ledger Check
+
+Path: `tools/receipt_ledger_check.py`
+
+A dependency-free JSONL validator for external-effect receipt ledgers. It checks missing and duplicate idempotency keys, malformed records, unsupported status values, completed effects without provider-side identifiers, and duplicate completed provider IDs.
+
+Published validation evidence:
+
+- **4/4 unit tests passed** against the public GitHub files
+- clean example ledger returns exit `0` and `OK`
+- problematic example ledger returns exit `1` with the expected three findings
+
+Examples live under `tools/examples/`.
+
+### Retry Guard
+
+Path: `tools/retry_guard.py`
+
+Classifies interrupted automation state into `SKIP_COMPLETED`, `RETRY`, `RECONCILE`, or `HUMAN_REVIEW`. It does not execute the external retry itself.
+
+See `tools/README.md` for usage.
+
 ## Case study
 
 ### RAG Fleet Harness MVP
@@ -105,6 +129,18 @@ Verified public claims include:
 - unknown-agent handling
 - invalid-configuration validation
 - 5 automated tests passed
+
+## Practical guides
+
+See `guides/README.md` for implementation-oriented notes on:
+
+- AI automation PoC boundaries
+- idempotency and effect receipts
+- read-back verification and reconciliation
+- AI-agent incident recovery
+- checkpoint and ownership boundaries
+
+The incident recovery runbook follows a conservative sequence: freeze affected writes, classify side effects, reconcile uncertain provider outcomes, restore from trustworthy checkpoints, reacquire ownership, and resume only unfinished work.
 
 ## Paid services
 
@@ -153,6 +189,6 @@ See `SERVICES.md` and `POC.md`.
 
 ## Contact / intake
 
-Use the repository's Paid Service Request issue form for non-confidential inquiries.
+Use the [Paid Service Request](../../issues/new?template=paid-service-request.yml) form when you already know which review or PoC scope you want, or the [Project Inquiry](../../issues/new?template=project-inquiry.yml) form for a broader non-confidential discussion.
 
-Do not post credentials, API keys, customer data, private URLs, proprietary datasets, or other confidential information in a public issue.
+Do not post credentials, API keys, customer data, private URLs, contracts, proprietary datasets, or other confidential information in a public issue.
