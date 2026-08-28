@@ -44,6 +44,7 @@ A provider-neutral incident flow for freezing affected writes, classifying side 
 
 - [Retry Guard](../tools/retry_guard.py) — conservative retry/reconcile classification
 - [Receipt Ledger Check](../tools/receipt_ledger_check.py) — JSONL receipt consistency validation
+- [RAG Trace Check](../tools/rag_trace_check.py) — dependency-free validation for run IDs, agent IDs, source IDs and retrieval scores
 - [CSV Doctor](../tools/csv-doctor/) — structural CSV/TSV checks before handoff
 
 ## Verified engineering proof
