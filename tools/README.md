@@ -87,11 +87,30 @@ For machine-readable output:
 python tools/receipt_ledger_check.py --json receipts.jsonl
 ```
 
+### Try the examples
+
+A clean ledger should exit `0`:
+
+```bash
+python tools/receipt_ledger_check.py tools/examples/receipts-valid.jsonl
+# OK
+```
+
+A problematic ledger exits `1` and prints each issue:
+
+```bash
+python tools/receipt_ledger_check.py tools/examples/receipts-problematic.jsonl
+```
+
+The published problematic example currently demonstrates three findings: a duplicate idempotency key, a completed receipt without a provider ID, and a record missing its idempotency key.
+
 ### Test Receipt Ledger Check
 
 ```bash
 cd tools
 python -m unittest -v test_receipt_ledger_check.py
 ```
+
+The published implementation has also been exercised end-to-end against both example ledgers: the clean fixture returned exit `0`, while the problematic fixture returned exit `1` with the expected three findings.
 
 These utilities are intentionally narrow. They do not call external APIs, bypass approval gates, infer success from missing evidence, or perform retries themselves. The caller remains responsible for external-system reconciliation and policy decisions.
