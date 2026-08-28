@@ -1,0 +1,48 @@
+# AgentLink Low-Ticket Workflow Kits
+
+Small self-serve templates for people who want a concrete workflow aid before buying a review or implementation service.
+
+## Research Source Log Kit v1 — ¥480
+
+For freelance research, writing, virtual-assistant work, and evidence-based handoff.
+
+Includes:
+- `source_log.csv` for source, claim, evidence, verification, and handoff tracking
+- `fact_check_checklist.md` for claim-by-claim verification
+- `research_handoff.md` for unresolved claims, conflicts, caveats, and next checks
+- README with usage boundaries
+
+**Buy now:** https://buy.stripe.com/7sYaEW7dcgfk6wxg4XgEg0c
+
+## Spreadsheet QA Kit v1 — ¥580
+
+For safer CSV, Excel, and Google Sheets delivery.
+
+Includes:
+- `spreadsheet_delivery_checklist.md`
+- `qa_log.csv`
+- `handoff_notes.md`
+- `csv_schema_checklist.md`
+- README with usage boundaries
+
+**Buy now:** https://buy.stripe.com/3cIeVc2WW4wC6wx4mfgEg0b
+
+## Freelance Job Tracker Kit v1 — ¥780
+
+For keeping applications, client messages, deadlines, and delivery checks in one lightweight workflow.
+
+Includes:
+- `applications.csv`
+- `client_chat_log.csv`
+- `deadlines.csv`
+- `delivery_checklist.md`
+- `weekly_review.md`
+- README with usage boundaries
+
+**Buy now:** https://buy.stripe.com/bJe14mcxw5AGg772e7gEg0a
+
+## Delivery
+
+After a verified successful Stripe payment, the corresponding ZIP package is delivered to the email address associated with the purchase. The packages are prepared and versioned for fulfillment.
+
+These templates are workflow aids. They do not guarantee factual correctness, error-free spreadsheets, client acceptance, job wins, income, or other business outcomes. Final verification and safe handling of confidential information remain the buyer's responsibility.
