@@ -16,6 +16,18 @@ A practical guide to preventing duplicate external actions during retries, resum
 
 - [Read: AIエージェントの二重実行を防ぐ](./ai-agent-idempotency-safety.md)
 
+### AI Agent Incident Recovery Runbook
+
+A provider-neutral incident flow for freezing affected writes, classifying side effects, reconciling uncertain outcomes, restoring from trustworthy checkpoints, re-establishing ownership, and resuming only unfinished work.
+
+- [Read: AI Agent Incident Recovery Runbook](./ai-agent-incident-recovery-runbook.md)
+
+## Public tools
+
+- [Retry Guard](../tools/retry_guard.py) — conservative retry/reconcile classification
+- [Receipt Ledger Check](../tools/receipt_ledger_check.py) — JSONL receipt consistency validation
+- [CSV Doctor](../tools/csv-doctor/) — structural CSV/TSV checks before handoff
+
 ## Verified engineering proof
 
 AgentLink also publishes a sanitized RAG Fleet Harness case study demonstrating 10 isolated agent configurations, routing, source-aware results, run IDs, health reporting, validation, unknown-agent handling, and five passing automated tests.
