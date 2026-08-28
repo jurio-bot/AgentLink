@@ -4,6 +4,21 @@ This page is the public portfolio index for AgentLink's verified technical demos
 
 The production AgentLink core remains private. Public examples are deliberately standalone and avoid exposing private authorization, infrastructure, credentials, customer data, or internal runbooks.
 
+## Available for contract work
+
+Currently available for narrowly scoped **AI automation / Python API / RAG / AI-agent reliability** contract work, including small paid trials and proof-of-concept tasks.
+
+Good first engagements include:
+
+- small Python or API-connected automation prototypes
+- RAG / AI-agent workflow validation
+- idempotency, retry, recovery, receipt, and worker-ownership reviews
+- reproducible technical experiments, validators, and testable helper tools
+
+For Japanese teams: **AI自動化・Python/API連携・RAG・AIエージェントの小規模PoC／技術検証を、業務委託・小さな有償トライアルから対応可能です。** 未確認の商用実績や顧客成果は誇張せず、公開デモとテストで確認できる範囲を起点に進めます。
+
+Fixed-price starting points and larger PoC scopes are listed below. For non-confidential inquiries, use the repository's Paid Service Request issue form.
+
 ## Technical demos
 
 ### Receipt Replay Simulator
