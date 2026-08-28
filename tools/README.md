@@ -27,7 +27,7 @@ It accepts a JSON receipt/incident record and emits one decision:
 - `RECONCILE` — an external side effect is confirmed or its outcome is uncertain; inspect the external system before attempting another write.
 - `HUMAN_REVIEW` — a human gate or retry limit requires review.
 
-### Run
+### Run Retry Guard
 
 ```bash
 echo '{"status":"failed","side_effect":"unknown"}' | python tools/retry_guard.py
@@ -45,7 +45,7 @@ JSON output is also available:
 echo '{"status":"failed","side_effect":"none","attempts":1}' | python tools/retry_guard.py --json
 ```
 
-### Input fields
+### Retry Guard input fields
 
 | Field | Type | Meaning |
 |---|---|---|
@@ -55,11 +55,43 @@ echo '{"status":"failed","side_effect":"none","attempts":1}' | python tools/retr
 | `attempts` | int | Retry attempts already used. Defaults to `0`. |
 | `max_attempts` | int | Retry ceiling. Defaults to `3`. |
 
-### Test
+### Test Retry Guard
 
 ```bash
 cd tools
 python -m unittest -v test_retry_guard.py
 ```
 
-The utility is intentionally narrow. It does not call external APIs, bypass approval gates, infer success from missing evidence, or perform retries itself. The caller remains responsible for external-system reconciliation and policy decisions.
+## Receipt Ledger Check
+
+`receipt_ledger_check.py` validates a JSONL ledger of external-effect receipts without performing any external action.
+
+It detects:
+
+- missing idempotency keys
+- duplicate idempotency keys
+- malformed JSON records
+- unknown status values
+- completed receipts that lack a provider-side object ID
+- duplicate provider IDs among completed receipts
+
+### Run Receipt Ledger Check
+
+```bash
+python tools/receipt_ledger_check.py receipts.jsonl
+```
+
+For machine-readable output:
+
+```bash
+python tools/receipt_ledger_check.py --json receipts.jsonl
+```
+
+### Test Receipt Ledger Check
+
+```bash
+cd tools
+python -m unittest -v test_receipt_ledger_check.py
+```
+
+These utilities are intentionally narrow. They do not call external APIs, bypass approval gates, infer success from missing evidence, or perform retries themselves. The caller remains responsible for external-system reconciliation and policy decisions.
