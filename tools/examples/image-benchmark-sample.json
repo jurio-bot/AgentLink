@@ -1,0 +1,7 @@
+[
+  {"model":"balanced-v1","category":"photo","scores":{"composition":4.2,"prompt_adherence":4.4,"subject_consistency":4.1,"background_logic":4.0,"artifact_control":4.3}},
+  {"model":"balanced-v1","category":"illustration","scores":{"composition":4.4,"prompt_adherence":4.2,"subject_consistency":4.0,"background_logic":4.1,"artifact_control":4.2}},
+  {"model":"balanced-v1","category":"manga","scores":{"composition":3.9,"prompt_adherence":4.1,"subject_consistency":4.0,"background_logic":3.8,"artifact_control":4.0}},
+  {"model":"balanced-v1","category":"complex_composition","scores":{"composition":4.1,"prompt_adherence":4.0,"subject_consistency":3.9,"background_logic":4.2,"artifact_control":3.8}},
+  {"model":"portrait-specialist","category":"photo","scores":{"composition":4.9,"prompt_adherence":4.8,"subject_consistency":4.9,"background_logic":4.7,"artifact_control":4.8}}
+]

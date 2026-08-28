@@ -160,4 +160,27 @@ python -m unittest -v test_rag_trace_check.py
 
 The published test suite covers a valid trace plus missing run/agent IDs, empty sources, duplicate source IDs, and out-of-range scores.
 
+## Image Model Benchmark
+
+`image_model_benchmark.py` compares image-generation models across prompt categories instead of declaring a winner from one flattering image.
+
+The default required categories are `photo`, `illustration`, `manga`, and `complex_composition`. Each case accepts 0–5 scores such as composition, prompt adherence, subject consistency, background logic, and artifact control. Ranking prefers category coverage first, then worst-case quality, then overall mean.
+
+```bash
+python tools/image_model_benchmark.py tools/examples/image-benchmark-sample.json
+```
+
+For JSON output:
+
+```bash
+python tools/image_model_benchmark.py --json tools/examples/image-benchmark-sample.json
+```
+
+### Test Image Model Benchmark
+
+```bash
+cd tools
+python -m unittest -v test_image_model_benchmark.py
+```
+
 These utilities are intentionally narrow. They do not call external APIs, bypass approval gates, infer success from missing evidence, or perform retries themselves. The caller remains responsible for external-system reconciliation and policy decisions.
