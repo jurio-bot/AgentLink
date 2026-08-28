@@ -28,6 +28,12 @@ A compact checklist for deciding whether an agent workflow is ready to move beyo
 
 - [Read: AI Agent Production Readiness Checklist](./ai-agent-production-readiness-checklist.md)
 
+### Debuggable RAG Operations
+
+A practical operating contract for diagnosing bad RAG answers without guesswork. Covers source IDs, run IDs, agent/corpus isolation, validation, health reporting, and regression tests around failure boundaries.
+
+- [Read: Debuggable RAG Operations](./debuggable-rag-operations.md)
+
 ### AI Agent Incident Recovery Runbook
 
 A provider-neutral incident flow for freezing affected writes, classifying side effects, reconciling uncertain outcomes, restoring from trustworthy checkpoints, re-establishing ownership, and resuming only unfinished work.
