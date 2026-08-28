@@ -34,6 +34,12 @@ A practical operating contract for diagnosing bad RAG answers without guesswork.
 
 - [Read: Debuggable RAG Operations](./debuggable-rag-operations.md)
 
+### Remote `systemd --user` Debugging
+
+A practical way to distinguish a broken remote shell environment from an actually stopped user service. Covers `XDG_RUNTIME_DIR`, the user D-Bus socket, read-only process checks, and when not to restart.
+
+- [Read: Debugging systemd user services from remote shells](./systemd-user-service-remote-shell-debugging.md)
+
 ### AI Agent Incident Recovery Runbook
 
 A provider-neutral incident flow for freezing affected writes, classifying side effects, reconciling uncertain outcomes, restoring from trustworthy checkpoints, re-establishing ownership, and resuming only unfinished work.
