@@ -183,4 +183,24 @@ cd tools
 python -m unittest -v test_image_model_benchmark.py
 ```
 
+## User Bus Doctor
+
+`user_bus_doctor.py` diagnoses a common Linux failure mode where `systemd --user` works in a normal login session but fails from a remote shell, service, or automation worker.
+
+It performs read-only checks for `XDG_RUNTIME_DIR`, `DBUS_SESSION_BUS_ADDRESS`, the referenced D-Bus socket path, and whether the systemd user manager is reachable.
+
+```bash
+python tools/user_bus_doctor.py
+python tools/user_bus_doctor.py --json
+```
+
+Use `--no-systemctl` when you only want to inspect the caller environment without probing the user manager.
+
+### Test User Bus Doctor
+
+```bash
+cd tools
+python -m unittest -v test_user_bus_doctor.py
+```
+
 These utilities are intentionally narrow. They do not call external APIs, bypass approval gates, infer success from missing evidence, or perform retries themselves. The caller remains responsible for external-system reconciliation and policy decisions.
