@@ -30,6 +30,12 @@ Useful for writers, researchers, assistants, data-entry workers, developers, des
 
 A checklist + handoff-log pack for safer CSV, Excel, and Google Sheets delivery. It pairs with the free CSV Doctor CLI and targets data-entry, research, ecommerce, assistant, and spreadsheet-heavy workflows.
 
+## Research Source Log Kit — ¥480
+
+**[See details](./products/RESEARCH_SOURCE_LOG_KIT.md)** · **Buy now:** https://buy.stripe.com/7sYaEW7dcgfk6wxg4XgEg0c
+
+A source-log, fact-check checklist, and research handoff pack for writers, researchers, virtual assistants, content teams, and source-backed reports. It helps separate reviewed evidence, assumptions, and unresolved items before delivery.
+
 ## AI Automation Quickstart Kit — ¥980
 
 **Buy now:** https://buy.stripe.com/3cIdR8cxw2ou8EFbOHgEg09
@@ -61,4 +67,4 @@ For hands-on reviews or implementation, see [SERVICES.md](./SERVICES.md).
 
 ---
 
-More digital products are being prepared across AI automation, data quality, freelance workflow, and practical productivity. Product claims are limited to the actual contents delivered; we do not fabricate customer results, adoption numbers, installs, stars, or reviews.
+More digital products are being prepared across AI automation, data quality, freelance workflow, research, and practical productivity. Product claims are limited to the actual contents delivered; we do not fabricate customer results, adoption numbers, installs, stars, or reviews.
