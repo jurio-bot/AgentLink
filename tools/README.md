@@ -113,4 +113,51 @@ python -m unittest -v test_receipt_ledger_check.py
 
 The published implementation has also been exercised end-to-end against both example ledgers: the clean fixture returned exit `0`, while the problematic fixture returned exit `1` with the expected three findings.
 
+## RAG Trace Check
+
+`rag_trace_check.py` validates the minimum trace evidence needed to diagnose a RAG execution without calling any model, vector database, or external API.
+
+It checks:
+
+- non-empty `run_id`
+- non-empty `agent_id`
+- a non-empty `sources` list
+- non-empty and unique `source_id` values
+- optional source scores are numeric and stay between `0` and `1`
+
+Example trace:
+
+```json
+{
+  "run_id": "run-123",
+  "agent_id": "support-rag",
+  "sources": [
+    {"source_id": "doc-a", "score": 0.91},
+    {"source_id": "doc-b", "score": 0.44}
+  ]
+}
+```
+
+Run it from a file:
+
+```bash
+python tools/rag_trace_check.py trace.json
+```
+
+Or pipe JSON and request machine-readable output:
+
+```bash
+echo '{"run_id":"run-1","agent_id":"demo","sources":[{"source_id":"doc-1","score":0.8}]}' \
+  | python tools/rag_trace_check.py --json
+```
+
+### Test RAG Trace Check
+
+```bash
+cd tools
+python -m unittest -v test_rag_trace_check.py
+```
+
+The published test suite covers a valid trace plus missing run/agent IDs, empty sources, duplicate source IDs, and out-of-range scores.
+
 These utilities are intentionally narrow. They do not call external APIs, bypass approval gates, infer success from missing evidence, or perform retries themselves. The caller remains responsible for external-system reconciliation and policy decisions.
