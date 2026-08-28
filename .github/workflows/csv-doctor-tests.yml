@@ -1,0 +1,27 @@
+name: CSV Doctor tests
+
+on:
+  push:
+    paths:
+      - 'tools/csv-doctor/**'
+      - '.github/workflows/csv-doctor-tests.yml'
+  pull_request:
+    paths:
+      - 'tools/csv-doctor/**'
+      - '.github/workflows/csv-doctor-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/csv-doctor
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest -v test_csv_doctor.py
