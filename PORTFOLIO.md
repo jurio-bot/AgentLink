@@ -6,16 +6,17 @@ The production AgentLink core remains private. Public examples are deliberately 
 
 ## Available for contract work
 
-Currently available for narrowly scoped **AI automation / Python API / RAG / AI-agent reliability** contract work, including small paid trials and proof-of-concept tasks.
+Currently available for narrowly scoped **AI automation / Python API / RAG / AI-agent reliability / local image-generation workflow** contract work, including small paid trials and proof-of-concept tasks.
 
 Good first engagements include:
 
 - small Python or API-connected automation prototypes
 - RAG / AI-agent workflow validation
 - idempotency, retry, recovery, receipt, and worker-ownership reviews
+- ComfyUI / ComfyStudio workflow validation and controlled image-generation experiments
 - reproducible technical experiments, validators, and testable helper tools
 
-For Japanese teams: **AI自動化・Python/API連携・RAG・AIエージェントの小規模PoC／技術検証を、業務委託・小さな有償トライアルから対応可能です。** 未確認の商用実績や顧客成果は誇張せず、公開デモとテストで確認できる範囲を起点に進めます。
+For Japanese teams: **AI自動化・Python/API連携・RAG・AIエージェントの小規模PoC／技術検証、ComfyUI系の画像生成ワークフロー検証を、業務委託・小さな有償トライアルから対応可能です。** 未確認の商用実績や顧客成果は誇張せず、公開デモとテストで確認できる範囲を起点に進めます。
 
 Fixed-price starting points and larger PoC scopes are listed below. For non-confidential inquiries, use the repository's [Paid Service Request](../../issues/new?template=paid-service-request.yml) or [Project Inquiry](../../issues/new?template=project-inquiry.yml) form.
 
@@ -90,6 +91,21 @@ Demonstrates:
 
 The demo uses no real ERP, credentials, or customer data.
 
+### Image Generation Workflow Proof
+
+See `IMAGE_GENERATION_PORTFOLIO.md`.
+
+Verified local scope includes:
+
+- ComfyUI / ComfyStudio on an AMD RX 6700 XT
+- SDXL-family workflow experiments
+- self-produced SFW character-consistency samples across standing and seated poses
+- controlled outfit and color variation
+- a documented IPAdapter failure mode where identity held better than clothing color
+- explicit separation of identity/reference, pose/composition, prompt, and seed controls
+
+The broader 18-model by 6-test image benchmark is still incomplete and is not claimed as finished.
+
 ## Public reliability tools
 
 ### Receipt Ledger Check
@@ -139,6 +155,7 @@ See `guides/README.md` for implementation-oriented notes on:
 - read-back verification and reconciliation
 - AI-agent incident recovery
 - checkpoint and ownership boundaries
+- ComfyUI character consistency and composition control
 
 The incident recovery runbook follows a conservative sequence: freeze affected writes, classify side effects, reconcile uncertain provider outcomes, restore from trustworthy checkpoints, reacquire ownership, and resume only unfinished work.
 
