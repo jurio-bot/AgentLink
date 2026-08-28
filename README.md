@@ -18,6 +18,8 @@
 >
 > **Need a technical second opinion?** [AI Agent / RAG Architecture Quick Audit — ¥9,800](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)
 >
+> **Need a reliability / recovery review?** [Agent Reliability & Recovery Review — ¥14,800](https://buy.stripe.com/8x2fZg4104wC9IJ4mfgEg08)
+>
 > **Want a working proof?** [AI Automation Small PoC Starter — ¥29,800](https://buy.stripe.com/eVq9AS8hg8MS6wxbOHgEg07)
 >
 > **Support AgentLink:** [Flexible project support](https://buy.stripe.com/7sYeVcbtsgfk6wxbOHgEg00) · [Supporter ¥500/mo](https://buy.stripe.com/00w6oG7dc9QW7ABg4XgEg01) · [Builder Patron ¥1,500/mo](https://buy.stripe.com/eVq14m4102oubQR6ungEg02) · [Infrastructure Patron ¥5,000/mo](https://buy.stripe.com/dRm6oG554d385stf0TgEg03)
@@ -59,11 +61,15 @@ AgentLink currently offers a low-friction path from first assessment to implemen
    [Buy now](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)  
    Architecture review, risk checklist, quality/operability gaps, prioritized next steps, and implementation plan.
 
-4. **AI Automation Small PoC Starter — ¥29,800**  
+4. **Agent Reliability & Recovery Review — ¥14,800**  
+   [Buy now](https://buy.stripe.com/8x2fZg4104wC9IJ4mfgEg08)  
+   Operational reliability review covering duplicate-execution risk, idempotency, retries, failure recovery, checkpoints, worker leases, stale-owner recovery, and receipt/audit design. Implementation is outside this fixed review scope.
+
+5. **AI Automation Small PoC Starter — ¥29,800**  
    [Buy now](https://buy.stripe.com/eVq9AS8hg8MS6wxbOHgEg07)  
    One narrow, non-production workflow: requirements, boundary definition, small executable prototype, basic validation, and handoff notes. Production deployment, ongoing operation, extra integrations, and large-scale data work are outside this fixed scope.
 
-5. **Larger Python / API / RAG / multi-agent PoCs**  
+6. **Larger Python / API / RAG / multi-agent PoCs**  
    See [SERVICES.md](./SERVICES.md) and [request a paid service or PoC](../../issues/new?template=paid-service-request.yml).
 
 ## Why AgentLink exists
