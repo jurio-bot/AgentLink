@@ -8,6 +8,8 @@
 >
 > **For research & fact-checking:** [Research Source Log Kit — ¥480](./products/RESEARCH_SOURCE_LOG_KIT.md)
 >
+> **For safer AI automation:** [AI Automation Safety Checklist — ¥500](./products/AL-CHK-001.md)
+>
 > **Free starting point:** [AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)
 >
 > **DIY planning kit:** [AI Automation Quickstart Kit — ¥980](./DIGITAL_PRODUCTS.md)
