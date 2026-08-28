@@ -1,0 +1,37 @@
+name: Receipt reliability tests
+
+on:
+  push:
+    paths:
+      - 'tools/receipt_ledger_check.py'
+      - 'tools/test_receipt_ledger_check.py'
+      - 'demos/receipt-replay-simulator/demo.py'
+      - 'demos/receipt-replay-simulator/test_demo.py'
+      - '.github/workflows/receipt-reliability-tests.yml'
+  pull_request:
+    paths:
+      - 'tools/receipt_ledger_check.py'
+      - 'tools/test_receipt_ledger_check.py'
+      - 'demos/receipt-replay-simulator/demo.py'
+      - 'demos/receipt-replay-simulator/test_demo.py'
+      - '.github/workflows/receipt-reliability-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test receipt ledger
+        working-directory: tools
+        run: python -m unittest -v test_receipt_ledger_check.py
+      - name: Test receipt replay simulator
+        working-directory: demos/receipt-replay-simulator
+        run: python -m unittest -v test_demo.py
