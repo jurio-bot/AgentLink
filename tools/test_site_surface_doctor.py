@@ -53,6 +53,44 @@ class SiteSurfaceDoctorTests(unittest.TestCase):
         self.assertFalse(result["ok"])
         self.assertEqual(result["findings"][0]["kind"], "path_escape")
 
+    def test_sitemap_membership(self):
+        root = self.make_site()
+        (root / "index.html").write_text('<a href="notes/a.html">A</a>', encoding="utf-8")
+        (root / "notes" / "a.html").write_text('A', encoding="utf-8")
+        (root / "sitemap.xml").write_text(
+            '<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            '<url><loc>https://example.test/</loc></url>'
+            '<url><loc>https://example.test/notes/a.html</loc></url></urlset>',
+            encoding="utf-8",
+        )
+        result = scan(root, sitemap=Path("sitemap.xml"))
+        self.assertTrue(result["ok"])
+
+    def test_missing_from_sitemap_is_blocking_but_noindex_is_not_required(self):
+        root = self.make_site()
+        (root / "index.html").write_text('<a href="notes/a.html">A</a>', encoding="utf-8")
+        (root / "notes" / "a.html").write_text('A', encoding="utf-8")
+        (root / "notes" / "private.html").write_text(
+            '<meta name="robots" content="noindex,nofollow">Private', encoding="utf-8"
+        )
+        (root / "sitemap.xml").write_text(
+            '<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            '<url><loc>https://example.test/</loc></url></urlset>', encoding="utf-8"
+        )
+        result = scan(root, sitemap=Path("sitemap.xml"))
+        kinds = [finding["kind"] for finding in result["findings"]]
+        self.assertFalse(result["ok"])
+        self.assertEqual(kinds.count("missing_from_sitemap"), 1)
+        self.assertIn("noindex", kinds)
+
+    def test_malformed_sitemap_is_blocking(self):
+        root = self.make_site()
+        (root / "index.html").write_text('Home', encoding="utf-8")
+        (root / "sitemap.xml").write_text('<urlset>', encoding="utf-8")
+        result = scan(root, sitemap=Path("sitemap.xml"))
+        self.assertFalse(result["ok"])
+        self.assertEqual(result["findings"][0]["kind"], "sitemap_error")
+
 
 if __name__ == "__main__":
     unittest.main()
