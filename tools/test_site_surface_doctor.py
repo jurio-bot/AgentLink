@@ -83,6 +83,19 @@ class SiteSurfaceDoctorTests(unittest.TestCase):
         self.assertEqual(kinds.count("missing_from_sitemap"), 1)
         self.assertIn("noindex", kinds)
 
+    def test_sitemap_target_missing_on_disk_is_blocking(self):
+        root = self.make_site()
+        (root / "index.html").write_text('Home', encoding="utf-8")
+        (root / "sitemap.xml").write_text(
+            '<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            '<url><loc>https://example.test/</loc></url>'
+            '<url><loc>https://example.test/deleted.html</loc></url></urlset>', encoding="utf-8"
+        )
+        result = scan(root, sitemap=Path("sitemap.xml"))
+        kinds = [finding["kind"] for finding in result["findings"]]
+        self.assertFalse(result["ok"])
+        self.assertIn("sitemap_missing_target", kinds)
+
     def test_malformed_sitemap_is_blocking(self):
         root = self.make_site()
         (root / "index.html").write_text('Home', encoding="utf-8")
