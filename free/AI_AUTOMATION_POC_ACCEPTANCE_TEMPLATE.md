@@ -65,6 +65,6 @@ Record:
 
 Want the planning worksheets that come before this acceptance step? The **AI Automation Quickstart Kit** includes an automation readiness scorecard, PoC planning canvas, API preflight, reliability/recovery checklist, and ROI estimator:
 
-https://github.com/jurio-bot/AgentLink/blob/main/DIGITAL_PRODUCTS.md
+https://github.com/paper-daemon/AgentLink/blob/main/DIGITAL_PRODUCTS.md
 
 This template is a planning aid, not a security audit, legal/compliance review, or guarantee of business outcomes.

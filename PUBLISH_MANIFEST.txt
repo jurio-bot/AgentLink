@@ -21,6 +21,6 @@ Publication rule:
 - Do not copy hidden files.
 - Do not copy any production source tree.
 - Do not copy credentials, environment files, private URLs, hostnames, network configuration, user/customer data, or internal runbooks.
-- Public target repository: jurio-bot/AgentLink, only if that repository does not already exist.
+- Public target repository: paper-daemon/AgentLink, only if that repository does not already exist.
 - Target visibility: public.
 - Initial publication is documentation/showcase only.
