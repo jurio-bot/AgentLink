@@ -10,6 +10,12 @@ Before automating a large workflow, define one observable outcome, run an API pr
 
 - [Read: AI Automation PoC Boundaries](./ai-automation-poc-boundaries.md)
 
+### Browser Automation: Observe → Act → Verify
+
+A practical loop for browser automation where a successful click is not treated as proof that the intended outcome happened. Covers fresh-state observation, one-step actions, post-state verification, unknown outcomes, reconciliation, and compact receipts.
+
+- [Read: Browser Automation Observe → Act → Verify](./browser-automation-observe-act-verify.md)
+
 ### AI Agent Idempotency & Receipt Safety
 
 A practical guide to preventing duplicate external actions during retries, resumes, and partial failures. Covers idempotency keys, effect receipts, read-back verification, reconciliation, and authority boundaries.
