@@ -70,7 +70,7 @@ A provider-neutral incident flow for freezing affected writes, classifying side 
 - [Receipt Ledger Check](../tools/receipt_ledger_check.py) — JSONL receipt consistency validation
 - [RAG Trace Check](../tools/rag_trace_check.py) — dependency-free validation for run IDs, agent IDs, source IDs and retrieval scores
 - [CSV Doctor](../tools/csv-doctor/) — structural CSV/TSV checks before handoff
-- [Site Surface Doctor](../tools/site_surface_doctor.py) — offline static-site checks for broken internal links, duplicate canonicals, noindex visibility, path escapes, and stale text
+- [Site Surface Doctor](../tools/SITE_SURFACE_DOCTOR.md) — offline static-site checks for broken internal links, duplicate canonicals, noindex visibility, path escapes, stale text, and optional sitemap membership
 
 ## Verified engineering proof
 
