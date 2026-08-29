@@ -2,6 +2,14 @@
 
 Small self-serve templates for people who want a concrete workflow aid before buying a review or implementation service.
 
+## Pick the smallest kit that matches the mess
+
+- **Research Source Log Kit — ¥480**: choose this when the hard part is keeping claims, sources, evidence, and unresolved questions traceable.
+- **Spreadsheet QA Kit — ¥580**: choose this when the hard part is delivering CSV/Excel/Sheets without silent schema, formatting, or handoff mistakes.
+- **Freelance Job Tracker Kit — ¥780**: choose this when applications, client messages, deadlines, and delivery checks are scattered across tabs and inboxes.
+
+These are intentionally small workflow kits, not courses or magic automation bundles. If you already have a working system for the problem above, you probably do not need the matching kit.
+
 ## Research Source Log Kit v1 — ¥480
 
 For freelance research, writing, virtual-assistant work, and evidence-based handoff.
