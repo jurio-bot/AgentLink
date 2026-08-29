@@ -183,6 +183,26 @@ cd tools
 python -m unittest -v test_image_model_benchmark.py
 ```
 
+## Editorial Depth Check
+
+`editorial_depth_check.py` is a conservative preflight for outward-facing drafts. It does **not** score whether writing is good. It only raises review flags for shapes that can look substantial while carrying little argument or concrete context.
+
+In `flagship` mode it looks for thin length, heading-heavy outlines, generic template headings, listicle shape, missing tension/counter-angle, and missing concrete trigger signals. Use `micro` mode for intentionally short notes so brevity itself is not treated as a defect.
+
+```bash
+python tools/editorial_depth_check.py draft.md
+python tools/editorial_depth_check.py --mode micro short-note.md
+```
+
+A clean result only means the heuristic did not raise a red flag; editorial judgment is still required.
+
+### Test Editorial Depth Check
+
+```bash
+cd tools
+python -m unittest -v test_editorial_depth_check.py
+```
+
 ## User Bus Doctor
 
 `user_bus_doctor.py` diagnoses a common Linux failure mode where `systemd --user` works in a normal login session but fails from a remote shell, service, or automation worker.
