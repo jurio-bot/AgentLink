@@ -29,14 +29,24 @@ python tools/site_surface_doctor.py ./site \
   --stale-text 'old.example.com'
 ```
 
-Check sitemap membership:
+Check that indexable HTML owned by this checkout appears in the sitemap:
 
 ```bash
 python tools/site_surface_doctor.py ./site \
   --sitemap sitemap.xml
 ```
 
-Combine the checks and return JSON for CI or another worker:
+If one checkout owns the entire hostname namespace, you can also require every sitemap path to exist locally:
+
+```bash
+python tools/site_surface_doctor.py ./site \
+  --sitemap sitemap.xml \
+  --require-local-sitemap-targets
+```
+
+Do not enable that strict reverse check when one hostname aggregates sibling deployments, such as multiple GitHub Pages project repositories. In that layout a valid sitemap path may intentionally live outside the selected checkout.
+
+Combine the normal checks and return JSON for CI or another worker:
 
 ```bash
 python tools/site_surface_doctor.py ./site \
@@ -45,7 +55,7 @@ python tools/site_surface_doctor.py ./site \
   --json
 ```
 
-The sitemap check compares URL paths only, so the tool does not need network access or a configured production hostname.
+The sitemap checks compare URL paths only, so the tool does not need network access or a configured production hostname.
 
 ## Exit codes
 
@@ -59,6 +69,6 @@ cd tools
 python -m unittest -v test_site_surface_doctor.py
 ```
 
-The public test suite covers clean sites, stale text, broken internal targets, path escape, duplicate canonical tags, informational `noindex`, valid sitemap membership, missing sitemap entries, and malformed sitemap XML.
+The public test suite covers clean sites, stale text, broken internal targets, path escape, duplicate canonical tags, informational `noindex`, valid sitemap membership, missing sitemap entries, malformed sitemap XML, and the opt-in reverse ownership check.
 
 This tool does not modify files, fetch pages, submit sitemaps, or decide whether a `noindex` directive is intentional.
