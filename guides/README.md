@@ -16,6 +16,12 @@ A practical loop for browser automation where a successful click is not treated 
 
 - [Read: Browser Automation Observe → Act → Verify](./browser-automation-observe-act-verify.md)
 
+### Android Thin Clients Without Weakening Identity
+
+A practical pattern for creating narrow Android companion apps without copying private keys or weakening device binding. Covers separate application identities, app-local enrollment, build variants, lifecycle telemetry, and keeping verification depth intact while reducing UI surface.
+
+- [Read: Android Thin Clients Without Weakening Identity](./android-thin-client-isolation.md)
+
 ### AI Agent Idempotency & Receipt Safety
 
 A practical guide to preventing duplicate external actions during retries, resumes, and partial failures. Covers idempotency keys, effect receipts, read-back verification, reconciliation, and authority boundaries.
