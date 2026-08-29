@@ -62,6 +62,16 @@ def site_path(root: Path, path: Path) -> str:
     return f"/{rel}"
 
 
+def local_path_for_site_path(root: Path, value: str) -> Path:
+    clean = value or "/"
+    if clean == "/":
+        return root / "index.html"
+    target = root / clean.lstrip("/")
+    if clean.endswith("/"):
+        target = target / "index.html"
+    return target.resolve()
+
+
 def sitemap_paths(path: Path) -> set[str]:
     tree = ET.parse(path)
     paths: set[str] = set()
@@ -128,6 +138,15 @@ def scan(
                     findings.append(
                         Finding("missing_from_sitemap", str(path.relative_to(root)), expected)
                     )
+            for value in sorted(listed):
+                target = local_path_for_site_path(root, value)
+                try:
+                    target.relative_to(root)
+                except ValueError:
+                    findings.append(Finding("sitemap_path_escape", str(sitemap), value))
+                    continue
+                if not target.exists():
+                    findings.append(Finding("sitemap_missing_target", str(sitemap), value))
 
     blocking = [item for item in findings if item.kind != "noindex"]
     return {
