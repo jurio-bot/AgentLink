@@ -203,6 +203,25 @@ cd tools
 python -m unittest -v test_editorial_depth_check.py
 ```
 
+## URL Contract Check
+
+`url_contract_check.py` catches stale public URLs or identifiers after a rename, domain move, or repository migration. It recursively scans text files without making network requests or modifying anything.
+
+```bash
+python tools/url_contract_check.py . \
+  --forbid old-name.example \
+  --require new-name.example
+```
+
+Use repeatable `--forbid` values for old domains/usernames and repeatable `--require` values for references that must exist somewhere in the scanned tree. Add `--json` for CI-friendly output.
+
+### Test URL Contract Check
+
+```bash
+cd tools
+python -m unittest -v test_url_contract_check.py
+```
+
 ## User Bus Doctor
 
 `user_bus_doctor.py` diagnoses a common Linux failure mode where `systemd --user` works in a normal login session but fails from a remote shell, service, or automation worker.
