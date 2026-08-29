@@ -57,6 +57,12 @@ python tools/site_surface_doctor.py ./site \
 
 The sitemap checks compare URL paths only, so the tool does not need network access or a configured production hostname.
 
+## Real-world example
+
+The companion example documents a live maintenance pass where reverse sitemap validation initially produced false positives because one GitHub Pages hostname aggregated multiple project repositories. The implementation was narrowed after testing against the real deployment instead of assuming one checkout owned every same-origin URL.
+
+- [Read the real-world example](./SITE_SURFACE_DOCTOR_EXAMPLE.md)
+
 ## Exit codes
 
 - `0`: no blocking findings
