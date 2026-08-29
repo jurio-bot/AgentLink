@@ -90,6 +90,7 @@ def scan(
     root: Path,
     stale_text: list[str] | None = None,
     sitemap: Path | None = None,
+    require_local_sitemap_targets: bool = False,
 ) -> dict[str, object]:
     root = root.resolve()
     stale_text = stale_text or []
@@ -138,15 +139,16 @@ def scan(
                     findings.append(
                         Finding("missing_from_sitemap", str(path.relative_to(root)), expected)
                     )
-            for value in sorted(listed):
-                target = local_path_for_site_path(root, value)
-                try:
-                    target.relative_to(root)
-                except ValueError:
-                    findings.append(Finding("sitemap_path_escape", str(sitemap), value))
-                    continue
-                if not target.exists():
-                    findings.append(Finding("sitemap_missing_target", str(sitemap), value))
+            if require_local_sitemap_targets:
+                for value in sorted(listed):
+                    target = local_path_for_site_path(root, value)
+                    try:
+                        target.relative_to(root)
+                    except ValueError:
+                        findings.append(Finding("sitemap_path_escape", str(sitemap), value))
+                        continue
+                    if not target.exists():
+                        findings.append(Finding("sitemap_missing_target", str(sitemap), value))
 
     blocking = [item for item in findings if item.kind != "noindex"]
     return {
@@ -164,10 +166,20 @@ def main() -> int:
     parser.add_argument("root", nargs="?", default=".")
     parser.add_argument("--stale-text", action="append", default=[], help="Fail when this exact text remains; repeatable.")
     parser.add_argument("--sitemap", help="Optional local sitemap XML path, relative to root unless absolute.")
+    parser.add_argument(
+        "--require-local-sitemap-targets",
+        action="store_true",
+        help="Also require every sitemap path to exist under this root; use only when one checkout owns the full site namespace.",
+    )
     parser.add_argument("--json", action="store_true", help="Emit machine-readable JSON.")
     args = parser.parse_args()
 
-    result = scan(Path(args.root), args.stale_text, Path(args.sitemap) if args.sitemap else None)
+    result = scan(
+        Path(args.root),
+        args.stale_text,
+        Path(args.sitemap) if args.sitemap else None,
+        args.require_local_sitemap_targets,
+    )
     if args.json:
         print(json.dumps(result, ensure_ascii=False, indent=2))
     else:
