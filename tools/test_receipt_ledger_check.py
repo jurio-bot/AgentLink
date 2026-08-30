@@ -30,6 +30,16 @@ class ReceiptLedgerCheckTests(unittest.TestCase):
         kinds = {issue["kind"] for issue in checker.validate(records, errors)}
         self.assertIn("invalid_json", kinds)
 
+    def test_missing_or_blank_status_is_reported(self):
+        src = io.StringIO(
+            '{"idempotency_key":"missing"}\n'
+            '{"idempotency_key":"blank","status":"   "}\n'
+        )
+        records, errors = checker.load_lines(src)
+        issues = checker.validate(records, errors)
+        missing = [issue for issue in issues if issue["kind"] == "missing_status"]
+        self.assertEqual([1, 2], [issue["line"] for issue in missing])
+
 
 if __name__ == "__main__":
     unittest.main()
