@@ -24,6 +24,39 @@ class SiteSurfaceDoctorTests(unittest.TestCase):
         self.assertTrue(result["ok"])
         self.assertEqual(result["blocking_count"], 0)
 
+    def test_incomplete_mit_license_is_blocking(self):
+        root = self.make_site()
+        (root / "index.html").write_text('Home', encoding="utf-8")
+        (root / "LICENSE").write_text(
+            'MIT License\n\nCopyright (c) 2026 example\n\n'
+            'Permission is hereby granted, free of charge, to any person obtaining a copy\n'
+            'The above copyright notice and this permission notice shall be included\n'
+            'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.\n',
+            encoding="utf-8",
+        )
+        result = scan(root)
+        self.assertFalse(result["ok"])
+        findings = [f for f in result["findings"] if f["kind"] == "incomplete_mit_license"]
+        self.assertEqual(len(findings), 1)
+        self.assertIn("liability", findings[0]["detail"])
+        self.assertIn("connection", findings[0]["detail"])
+
+    def test_complete_mit_license_is_clean_and_non_mit_is_ignored(self):
+        root = self.make_site()
+        (root / "index.html").write_text('Home', encoding="utf-8")
+        (root / "LICENSE").write_text(
+            'MIT License\n\nCopyright (c) 2026 example\n\n'
+            'Permission is hereby granted, free of charge, to any person obtaining a copy\n'
+            'The above copyright notice and this permission notice shall be included\n'
+            'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND\n'
+            'IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE\n'
+            'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+            encoding="utf-8",
+        )
+        self.assertTrue(scan(root)["ok"])
+        (root / "LICENSE").write_text('Custom showcase notice\n', encoding="utf-8")
+        self.assertTrue(scan(root)["ok"])
+
     def test_detects_missing_link_duplicate_canonical_and_stale_text(self):
         root = self.make_site()
         (root / "index.html").write_text(
