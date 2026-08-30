@@ -51,6 +51,14 @@ class RetryGuardTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             decide({"status": "failed", "side_effect": "maybe"})
 
+    def test_receipt_present_must_be_boolean(self):
+        with self.assertRaisesRegex(ValueError, "receipt_present must be a boolean"):
+            decide({"status": "failed", "side_effect": "none", "receipt_present": "false"})
+        self.assertEqual(
+            decide({"status": "failed", "side_effect": "none", "receipt_present": False}),
+            "RETRY",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
