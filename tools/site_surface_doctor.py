@@ -12,6 +12,19 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 
+def srcset_urls(value: str) -> list[str]:
+    """Return ordinary URL candidates from srcset; data URIs are ignored."""
+    if not value or "data:" in value.lower():
+        return []
+    urls: list[str] = []
+    for candidate in value.split(","):
+        candidate = candidate.strip()
+        if not candidate:
+            continue
+        urls.append(candidate.split()[0])
+    return urls
+
+
 class SurfaceParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
@@ -25,6 +38,8 @@ class SurfaceParser(HTMLParser):
             self.links.append(data["href"])
         if tag in {"img", "script", "source"} and data.get("src"):
             self.links.append(data["src"])
+        if tag in {"img", "source"} and data.get("srcset"):
+            self.links.extend(srcset_urls(data["srcset"]))
         if tag == "link" and data.get("rel", "").lower() == "canonical":
             self.canonicals.append(data.get("href", ""))
         if tag == "meta" and data.get("name", "").lower() == "robots":
