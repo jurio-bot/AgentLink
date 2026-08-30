@@ -63,8 +63,10 @@ class SurfaceParser(HTMLParser):
         data = {key: value or "" for key, value in attrs}
         if tag in {"a", "link"} and data.get("href"):
             self.links.append(data["href"])
-        if tag in {"img", "script", "source"} and data.get("src"):
+        if tag in {"img", "script", "source", "video", "audio", "track", "iframe"} and data.get("src"):
             self.links.append(data["src"])
+        if tag == "video" and data.get("poster"):
+            self.links.append(data["poster"])
         if tag in {"img", "source"} and data.get("srcset"):
             self.links.extend(srcset_urls(data["srcset"]))
         if tag == "link" and data.get("rel", "").lower() == "canonical":
