@@ -1,0 +1,31 @@
+name: Site Surface Doctor tests
+
+on:
+  push:
+    paths:
+      - 'tools/site_surface_doctor.py'
+      - 'tools/test_site_surface_doctor.py'
+      - 'tools/site_surface_doctor.md'
+      - '.github/workflows/site-surface-doctor-tests.yml'
+  pull_request:
+    paths:
+      - 'tools/site_surface_doctor.py'
+      - 'tools/test_site_surface_doctor.py'
+      - 'tools/site_surface_doctor.md'
+      - '.github/workflows/site-surface-doctor-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest -v test_site_surface_doctor.py
