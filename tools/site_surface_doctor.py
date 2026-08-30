@@ -12,6 +12,15 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 
+MIT_REQUIRED_TERMS = {
+    "grant": "Permission is hereby granted, free of charge",
+    "notice": "The above copyright notice and this permission notice shall be included",
+    "warranty": 'THE SOFTWARE IS PROVIDED "AS IS"',
+    "liability": "IN NO EVENT SHALL THE",
+    "connection": "OUT OF OR IN CONNECTION WITH THE SOFTWARE",
+}
+
+
 def srcset_urls(value: str) -> list[str]:
     """Return ordinary URL candidates from srcset; data URI candidates are ignored."""
     urls: list[str] = []
@@ -137,6 +146,22 @@ def sitemap_paths(path: Path) -> set[str]:
     return paths
 
 
+def mit_license_findings(root: Path) -> list[Finding]:
+    """Flag truncated MIT text only when a root license file explicitly identifies as MIT."""
+    findings: list[Finding] = []
+    for name in ("LICENSE", "LICENSE.txt", "LICENSE.md"):
+        path = root / name
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if not text.lstrip().startswith("MIT License"):
+            continue
+        missing = [label for label, needle in MIT_REQUIRED_TERMS.items() if needle not in text]
+        if missing:
+            findings.append(Finding("incomplete_mit_license", name, ",".join(missing)))
+    return findings
+
+
 def scan(
     root: Path,
     stale_text: list[str] | None = None,
@@ -147,7 +172,7 @@ def scan(
     root = root.resolve()
     stale_text = stale_text or []
     allow_external_prefixes = allow_external_prefixes or []
-    findings: list[Finding] = []
+    findings: list[Finding] = mit_license_findings(root)
     html_files = sorted(root.rglob("*.html"))
     indexable: list[Path] = []
 
