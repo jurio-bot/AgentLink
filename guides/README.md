@@ -4,6 +4,18 @@ Short, implementation-oriented notes for building AI automation and agent workfl
 
 ## Start here
 
+### Bounded Owner Worker Cockpit
+
+A practical pattern for keeping one logical Owner while bounded social/content/OSS/distribution workers use explicit resource keys, idempotency, evidence, receipts and checkpoint→rescore loops.
+
+- [Read: Bounded Owner Worker Cockpit](./bounded-owner-worker-cockpit.md)
+
+### Read Scope & Redaction Boundaries
+
+Read-only tooling still needs explicit boundaries. This note separates write scope, read scope and output scope using measured fixes from Repo Health Map, Repro Capsule and Data Shape Guard.
+
+- [Read: Read Scope & Redaction Boundaries](./read-scope-and-redaction-boundaries.md)
+
 ### AI Automation PoC Boundaries
 
 Before automating a large workflow, define one observable outcome, run an API preflight, decide recovery behavior, and separate proof from production complexity.
