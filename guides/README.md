@@ -16,6 +16,12 @@ Read-only tooling still needs explicit boundaries. This note separates write sco
 
 - [Read: Read Scope & Redaction Boundaries](./read-scope-and-redaction-boundaries.md)
 
+### GitHub Pages Source / Deploy Drift
+
+A measured recovery note for a static site where six sitemap routes still returned `200` from Pages even though their source files had disappeared from the main branch. Covers dependency inventory, source restoration, strict sitemap checks, SHA256 verification and live HTTP read-back.
+
+- [Read: GitHub Pages Source / Deploy Drift](./github-pages-source-deploy-drift.md)
+
 ### AI Automation PoC Boundaries
 
 Before automating a large workflow, define one observable outcome, run an API preflight, decide recovery behavior, and separate proof from production complexity.
