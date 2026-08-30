@@ -115,6 +115,23 @@ class SiteSurfaceDoctorTests(unittest.TestCase):
         self.assertIn("missing_internal", [f["kind"] for f in result["findings"]])
         self.assertIn("missing@2x.webp", [f["detail"] for f in result["findings"]])
 
+    def test_embedded_media_assets_are_checked(self):
+        root = self.make_site()
+        (root / "index.html").write_text(
+            '<video src="missing.mp4" poster="missing-poster.webp"></video>'
+            '<audio src="missing.mp3"></audio>'
+            '<track src="missing.vtt">'
+            '<iframe src="missing-frame.html"></iframe>',
+            encoding="utf-8",
+        )
+        result = scan(root)
+        details = {f["detail"] for f in result["findings"] if f["kind"] == "missing_internal"}
+        self.assertFalse(result["ok"])
+        self.assertEqual(
+            details,
+            {"missing.mp4", "missing-poster.webp", "missing.mp3", "missing.vtt", "missing-frame.html"},
+        )
+
     def test_data_uri_srcset_is_ignored_without_false_missing(self):
         root = self.make_site()
         (root / "index.html").write_text(
