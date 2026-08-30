@@ -1,70 +1,90 @@
 # AgentLink Digital Products
 
-Small, practical digital tools and templates for reliable automation, software delivery, data quality, and everyday freelance operations.
+Small, practical packs for safer automation, clearer handoffs, data-quality work and freelance operations.
+
+The catalog follows one rule: **small is fine; unfinished is not.** A paid pack should have a specific job, concrete contents, a clear scope boundary and a usable delivery artifact.
 
 ## Start free
 
-Use the free resources before buying anything:
+Use the free material first when it solves the problem well enough:
 
-- **[AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)** — a 20-point pre-check for workflow clarity, data/access, reliability planning, and business fit.
-- **[AI Automation PoC Acceptance Template](./FREE_AI_AUTOMATION_POC_ACCEPTANCE_TEMPLATE.md)** — define evidence-based acceptance criteria before implementation starts.
-- **[AI Agent Failure-Recovery Checklist](./FREE_AI_AGENT_FAILURE_RECOVERY_CHECKLIST.md)** — check duplicate safety, receipts, uncertain outcomes, stale workers, and recovery drills.
-- **[AI Automation Incident Receipt Template](./FREE_AI_AUTOMATION_INCIDENT_RECEIPT_TEMPLATE.md)** — capture evidence, side-effect certainty, recovery decisions, and final receipts after failures or timeouts.
-- **[AI Automation Retry Decision Tree](./free/ai-automation-retry-decision-tree.md)** — decide when an interrupted automation should skip, retry, reconcile, or stop for human review.
-- **[Retry Guard OSS CLI](./tools/README.md)** — dependency-free executable classifier that turns receipt/incident JSON into `SKIP_COMPLETED`, `RETRY`, `RECONCILE`, or `HUMAN_REVIEW`, with unit tests and no external API calls.
-- **[CSV Doctor](./tools/csv-doctor/README.md)** — zero-dependency CSV/TSV quality checker for blank rows, exact duplicates, encoding/delimiter detection, and inconsistent column counts; optional cleaned-copy output never modifies the source file.
+- **[AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)** — workflow clarity, access, reliability and business-fit preflight
+- **[AI Automation PoC Acceptance Template](./FREE_AI_AUTOMATION_POC_ACCEPTANCE_TEMPLATE.md)** — define evidence-based acceptance criteria before implementation
+- **[AI Agent Failure-Recovery Checklist](./FREE_AI_AGENT_FAILURE_RECOVERY_CHECKLIST.md)** — duplicate safety, receipts, stale workers and recovery drills
+- **[AI Automation Incident Receipt Template](./FREE_AI_AUTOMATION_INCIDENT_RECEIPT_TEMPLATE.md)** — record evidence and recovery decisions after failures/timeouts
+- **[AI Automation Retry Decision Tree](./free/ai-automation-retry-decision-tree.md)** — skip / retry / reconcile / human-review decision aid
+- **[Retry Guard OSS CLI](./tools/README.md)** — executable receipt/incident classifier with tests
+- **[CSV Doctor](./tools/csv-doctor/README.md)** — local CSV/TSV structural QA
 
-The free catalog is intentionally broader than AI-only workflows: practical data-quality and work-operations utilities are welcome when they are genuinely useful and independently testable.
+## Reliability & automation packs
 
-## Freelance Job Tracker Kit — ¥780
+### AI自動化 事故防止チェックリスト v2 — ¥500
 
-**[See details](./products/FREELANCE_JOB_TRACKER_KIT.md)** · **Buy now:** https://buy.stripe.com/bJe14mcxw5AGg772e7gEg0a
+**[Details](./products/AL-CHK-001.md)** · **[Buy](https://buy.stripe.com/4gM3cu410bZ45staKDgEg0d)**
 
-A lightweight CSV + Markdown pack for managing applications, client chats, deadlines, delivery checks, follow-ups, and text-first client communication without requiring a paid SaaS subscription.
+A compact preflight for duplicate execution, authority boundaries, human gates and recovery. Includes an effect/idempotency ledger and recovery playbook.
 
-Useful for writers, researchers, assistants, data-entry workers, developers, designers, and other freelancers working through marketplaces or direct contracts.
+Choose this when you already have a small automation and mainly want a safety check.
 
-## Spreadsheet QA Kit — ¥580
+### AI業務自動化 ヒアリング＆設計シート v2 — ¥980
 
-**[See details](./products/SPREADSHEET_QA_KIT.md)** · **Buy now:** https://buy.stripe.com/3cIeVc2WW4wC6wx4mfgEg0b
+**[Details](./products/AL-TPL-002.md)** · **[Buy](https://buy.stripe.com/6oU14m0OOaV06wxg4XgEg0e)**
 
-A checklist + handoff-log pack for safer CSV, Excel, and Google Sheets delivery. It pairs with the free CSV Doctor CLI and targets data-entry, research, ecommerce, assistant, and spreadsheet-heavy workflows.
+Editable discovery, workflow, risk/human-gate, retry/receipt and KPI templates consolidated into one canonical package.
 
-## Research Source Log Kit — ¥480
+Choose this when the workflow itself still needs to be mapped before implementation.
 
-**[See details](./products/RESEARCH_SOURCE_LOG_KIT.md)** · **Buy now:** https://buy.stripe.com/7sYaEW7dcgfk6wxg4XgEg0c
+### AI Automation Quickstart Kit — ¥980
 
-A source-log, fact-check checklist, and research handoff pack for writers, researchers, virtual assistants, content teams, and source-backed reports. It helps separate reviewed evidence, assumptions, and unresolved items before delivery.
+**[Details](./products/AI_AUTOMATION_QUICKSTART_KIT.md)** · **[Buy](https://buy.stripe.com/3cIdR8cxw2ou8EFbOHgEg09)**
 
-## AI Automation Quickstart Kit — ¥980
+A broader planning bundle: readiness scorecard, PoC planning canvas, API preflight, reliability checklist and ROI estimator.
 
-**Buy now:** https://buy.stripe.com/3cIdR8cxw2ou8EFbOHgEg09
+Choose this when you want a wider go/no-go and PoC-planning pack rather than only the workflow-design sheets above.
 
-A compact planning kit for taking one manual workflow from “maybe automate this” to a narrow, measurable PoC plan.
+### AI Agent Handoff & Recovery Kit v2 — ¥1,980
 
-### Included
+**[Details](./products/AI_AGENT_HANDOFF_RECOVERY_KIT.md)** · **[Buy](https://buy.stripe.com/fZudR8cxw6EK3kl2e7gEg0f)**
 
-- **Automation Readiness Scorecard** — 24 scored checks across workflow clarity, data/access, reliability, and business fit.
-- **AI Automation PoC Planning Canvas** — define scope, inputs, output contract, success metrics, human gates, failure modes, and acceptance criteria.
-- **API Integration Preflight** — auth, secrets, rate limits, retries, webhooks, schema drift, and test-plan checklist.
-- **Reliability & Recovery Checklist** — duplicate safety, idempotency, retries, worker ownership, receipts, reconciliation, and recovery.
-- **Automation ROI Estimator** — spreadsheet-friendly CSV for manual effort, tool cost, payback period, and simple first-year benefit estimates.
-- README and usage terms.
+State-first continuity templates for long-running agents: checkpoint schema, effect ledger, Owner/worker lease boundary, recovery decision tree, incident playbooks and worked examples.
 
-### Format
+Choose this when work must survive thread, worker or browser loss without repeating completed external effects.
 
-Markdown + CSV. No proprietary app is required. Files can be used with ordinary text editors, code editors, Obsidian, Notion-style workflows, Google Sheets, Excel, or compatible tools.
+## Freelance & data workflow kits
 
-### Delivery
+### Research Source Log Kit — ¥480
 
-After successful Stripe payment, delivery instructions are sent to the email address used at checkout. This is a digital product; nothing is physically shipped.
+**[Details](./products/RESEARCH_SOURCE_LOG_KIT.md)** · **[Buy](https://buy.stripe.com/7sYaEW7dcgfk6wxg4XgEg0c)**
 
-### Scope
+Source log, fact-check checklist and evidence-aware handoff pack for research/writing work.
 
-The kit is a planning aid. It does **not** include implementation work, a security audit, legal/compliance review, tax/financial advice, or guaranteed business outcomes.
+### Spreadsheet QA Kit — ¥580
 
-For hands-on reviews or implementation, see [SERVICES.md](./SERVICES.md).
+**[Details](./products/SPREADSHEET_QA_KIT.md)** · **[Buy](https://buy.stripe.com/3cIeVc2WW4wC6wx4mfgEg0b)**
 
----
+Pre-handoff checklist and delivery/revision log for CSV, Excel and Google Sheets work.
 
-More digital products are being prepared across AI automation, data quality, freelance workflow, research, and practical productivity. Product claims are limited to the actual contents delivered; we do not fabricate customer results, adoption numbers, installs, stars, or reviews.
+### Freelance Job Tracker Kit — ¥780
+
+**[Details](./products/FREELANCE_JOB_TRACKER_KIT.md)** · **[Buy](https://buy.stripe.com/bJe14mcxw5AGg772e7gEg0a)**
+
+CSV/Markdown templates for applications, client chats, deadlines, delivery state and follow-ups.
+
+## What these products are not
+
+These are practical workflow aids, not outcome guarantees. Unless a product page explicitly says otherwise, they do not include implementation work, legal/tax advice, security certification, identity verification, unlimited support, or guaranteed income / time savings / client acceptance.
+
+For hands-on engineering or fixed-scope reviews, see **[SERVICES.md](./SERVICES.md)**.
+
+## Publishing quality rule
+
+Before a paid item is promoted here, it should have:
+
+- one canonical package/version
+- a clear purpose and buyer fit
+- explicit included/excluded scope
+- clean package contents with no caches, credentials or local-only junk
+- a reproducible validation path where the product contains executable code
+- working checkout and delivery metadata
+
+Product claims are limited to the actual contents delivered. We do not fabricate customer results, installs, reviews or adoption numbers.
