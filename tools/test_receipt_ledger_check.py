@@ -40,6 +40,27 @@ class ReceiptLedgerCheckTests(unittest.TestCase):
         missing = [issue for issue in issues if issue["kind"] == "missing_status"]
         self.assertEqual([1, 2], [issue["line"] for issue in missing])
 
+    def test_blank_idempotency_key_is_missing(self):
+        src = io.StringIO('{"idempotency_key":"   ","status":"pending"}\n')
+        records, errors = checker.load_lines(src)
+        kinds = {issue["kind"] for issue in checker.validate(records, errors)}
+        self.assertIn("missing_idempotency_key", kinds)
+
+    def test_blank_provider_id_does_not_complete_receipt(self):
+        src = io.StringIO('{"idempotency_key":"x","status":"completed","provider_object_id":"   "}\n')
+        records, errors = checker.load_lines(src)
+        kinds = {issue["kind"] for issue in checker.validate(records, errors)}
+        self.assertIn("completed_without_provider_id", kinds)
+
+    def test_idempotency_key_comparison_trims_outer_whitespace(self):
+        src = io.StringIO(
+            '{"idempotency_key":"x","status":"pending"}\n'
+            '{"idempotency_key":" x ","status":"failed"}\n'
+        )
+        records, errors = checker.load_lines(src)
+        kinds = {issue["kind"] for issue in checker.validate(records, errors)}
+        self.assertIn("duplicate_idempotency_key", kinds)
+
 
 if __name__ == "__main__":
     unittest.main()
