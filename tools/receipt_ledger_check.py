@@ -11,6 +11,10 @@ from collections import Counter
 TERMINAL = {"completed", "succeeded", "failed", "cancelled", "blocked"}
 
 
+def normalized_text(value):
+    return str(value).strip() if value is not None else ""
+
+
 def load_lines(fp):
     records = []
     errors = []
@@ -33,14 +37,14 @@ def validate(records, parse_errors):
     keys = []
     completed_provider_ids = []
     for lineno, row in records:
-        key = row.get("idempotency_key")
+        key = normalized_text(row.get("idempotency_key"))
         raw_status = row.get("status")
-        status = str(raw_status).strip().lower() if raw_status is not None else ""
-        provider_id = row.get("provider_object_id") or row.get("provider_id")
+        status = normalized_text(raw_status).lower()
+        provider_id = normalized_text(row.get("provider_object_id")) or normalized_text(row.get("provider_id"))
         if not key:
             issues.append({"line": lineno, "kind": "missing_idempotency_key"})
         else:
-            keys.append((lineno, str(key)))
+            keys.append((lineno, key))
         if not status:
             issues.append({"line": lineno, "kind": "missing_status"})
         elif status not in TERMINAL and status not in {"pending", "running", "unknown"}:
@@ -48,7 +52,7 @@ def validate(records, parse_errors):
         if status in {"completed", "succeeded"} and not provider_id:
             issues.append({"line": lineno, "kind": "completed_without_provider_id"})
         if status in {"completed", "succeeded"} and provider_id:
-            completed_provider_ids.append((lineno, str(provider_id)))
+            completed_provider_ids.append((lineno, provider_id))
 
     key_counts = Counter(k for _, k in keys)
     for key, count in key_counts.items():
