@@ -24,10 +24,6 @@ def srcset_urls(value: str) -> list[str]:
             break
 
         if value[i : i + 5].lower() == "data:":
-            # data: URLs contain one syntax comma between metadata and payload.
-            # Treat that first comma as part of the URL. After payload begins,
-            # the next comma is the candidate delimiter unless a descriptor
-            # starts first; in that case the delimiter follows the descriptor.
             syntax_comma = value.find(",", i + 5)
             if syntax_comma < 0:
                 break
@@ -97,6 +93,17 @@ def local_target(root: Path, source: Path, raw_url: str) -> Path | None:
     return target.resolve()
 
 
+def matches_allowed_prefix(raw_url: str, prefixes: list[str]) -> bool:
+    path = urlsplit(raw_url).path
+    if not path.startswith("/"):
+        return False
+    for prefix in prefixes:
+        normalized = "/" + prefix.strip("/") + "/"
+        if path == normalized[:-1] or path.startswith(normalized):
+            return True
+    return False
+
+
 def site_path(root: Path, path: Path) -> str:
     rel = path.relative_to(root).as_posix()
     if rel == "index.html":
@@ -135,9 +142,11 @@ def scan(
     stale_text: list[str] | None = None,
     sitemap: Path | None = None,
     require_local_sitemap_targets: bool = False,
+    allow_external_prefixes: list[str] | None = None,
 ) -> dict[str, object]:
     root = root.resolve()
     stale_text = stale_text or []
+    allow_external_prefixes = allow_external_prefixes or []
     findings: list[Finding] = []
     html_files = sorted(root.rglob("*.html"))
     indexable: list[Path] = []
@@ -168,6 +177,8 @@ def scan(
                 findings.append(Finding("path_escape", rel, raw_url))
                 continue
             if not target.exists():
+                if matches_allowed_prefix(raw_url, allow_external_prefixes):
+                    continue
                 findings.append(Finding("missing_internal", rel, raw_url))
 
     if sitemap is not None:
@@ -215,6 +226,12 @@ def main() -> int:
         action="store_true",
         help="Also require every sitemap path to exist under this root; use only when one checkout owns the full site namespace.",
     )
+    parser.add_argument(
+        "--allow-external-prefix",
+        action="append",
+        default=[],
+        help="Root-relative path prefix owned outside this checkout (for example a sibling GitHub Pages project); repeatable.",
+    )
     parser.add_argument("--json", action="store_true", help="Emit machine-readable JSON.")
     args = parser.parse_args()
 
@@ -223,6 +240,7 @@ def main() -> int:
         args.stale_text,
         Path(args.sitemap) if args.sitemap else None,
         args.require_local_sitemap_targets,
+        args.allow_external_prefix,
     )
     if args.json:
         print(json.dumps(result, ensure_ascii=False, indent=2))
