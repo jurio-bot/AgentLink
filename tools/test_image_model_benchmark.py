@@ -42,6 +42,22 @@ class ImageModelBenchmarkTests(unittest.TestCase):
         self.assertEqual(out[0]["dimension_means"]["composition"], 3.5)
         self.assertEqual(out[0]["worst_case"], 3.5)
 
+    def test_rejects_inconsistent_dimension_sets(self):
+        records = [
+            {"model": "sparse", "category": "photo", "scores": {"composition": 5}},
+            row("full", "photo", 4),
+        ]
+        with self.assertRaisesRegex(ValueError, "dimensions must match"):
+            summarize(records)
+
+    def test_custom_dimension_schema_is_allowed_when_consistent(self):
+        records = [
+            {"model": "a", "category": "photo", "scores": {"style": 4, "detail": 3}},
+            {"model": "b", "category": "photo", "scores": {"detail": 5, "style": 2}},
+        ]
+        out = summarize(records, required_categories=("photo",))
+        self.assertEqual({"detail", "style"}, set(out[0]["dimension_means"]))
+
 
 if __name__ == "__main__":
     unittest.main()
