@@ -1,0 +1,23 @@
+name: Image Model Benchmark tests
+
+on:
+  push:
+    paths:
+      - "tools/image_model_benchmark.py"
+      - "tools/test_image_model_benchmark.py"
+      - ".github/workflows/image-model-benchmark-tests.yml"
+  pull_request:
+    paths:
+      - "tools/image_model_benchmark.py"
+      - "tools/test_image_model_benchmark.py"
+      - ".github/workflows/image-model-benchmark-tests.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: cd tools && python -m unittest -v test_image_model_benchmark.py
