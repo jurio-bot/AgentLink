@@ -43,7 +43,7 @@ The goal is not to replace foundation models. The goal is to make them more usef
 The public repository contains deliberately bounded demonstrations, documentation and case studies rather than the production runtime.
 
 - **[Receipt Replay Simulator](./demos/receipt-replay-simulator/)** — demonstrates conservative recovery for completed, not-started and uncertain actions
-- **[Site Surface Doctor proof](./PUBLIC_PROOF_SITE_SURFACE_DOCTOR.md)** — static-site preflight evidence covering responsive `srcset`, local video/audio/frame/poster assets, path boundaries, sitemap checks, and strict-by-default cross-repo Pages prefix handling with CI-backed regressions
+- **[Site Surface Doctor proof](./PUBLIC_PROOF_SITE_SURFACE_DOCTOR.md)** — static/repository preflight evidence covering responsive `srcset`, local video/audio/frame/poster assets, path boundaries, sitemap checks, strict-by-default cross-repo Pages prefix handling, and incomplete standard MIT text when a license explicitly identifies itself as MIT, with CI-backed regressions
 - **[RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md)** — isolated agent configuration, routing, validation, health reporting and an automated test suite
 - **[Architecture notes](./ARCHITECTURE.md)** — execution-layer design and boundaries
 - **[Technical proofs](./TECHNICAL_PROOFS.md)** — public evidence for selected implementation claims
