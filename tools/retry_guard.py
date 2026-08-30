@@ -32,7 +32,10 @@ DECISIONS = {"SKIP_COMPLETED", "RETRY", "RECONCILE", "HUMAN_REVIEW"}
 
 def decide(record: Mapping[str, Any]) -> str:
     status = str(record.get("status", "")).strip().lower()
-    receipt_present = bool(record.get("receipt_present", False))
+    receipt_value = record.get("receipt_present", False)
+    if not isinstance(receipt_value, bool):
+        raise ValueError("receipt_present must be a boolean")
+    receipt_present = receipt_value
     side_effect = str(record.get("side_effect", "unknown")).strip().lower()
 
     try:
