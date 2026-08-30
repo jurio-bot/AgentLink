@@ -4,6 +4,12 @@ Short, implementation-oriented notes for building AI automation and agent workfl
 
 ## Start here
 
+### Free Tool Reproducibility Matrix
+
+A fresh-origin verification table for six public tools. It records the exact public main revisions and test commands that reproduced 25 passing checks without relying on local dirty worktrees.
+
+- [Read: Free Tool Reproducibility Matrix](./free-tool-repro-matrix.md)
+
 ### Bounded Owner Worker Cockpit
 
 A practical pattern for keeping one logical Owner while bounded social/content/OSS/distribution workers use explicit resource keys, idempotency, evidence, receipts and checkpoint→rescore loops.
