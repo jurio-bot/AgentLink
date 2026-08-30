@@ -53,6 +53,29 @@ class SiteSurfaceDoctorTests(unittest.TestCase):
         self.assertFalse(result["ok"])
         self.assertEqual(result["findings"][0]["kind"], "path_escape")
 
+    def test_allowed_external_prefix_skips_only_matching_root_relative_missing(self):
+        root = self.make_site()
+        (root / "index.html").write_text(
+            '<a href="/creator-gear-router/">Sibling Pages project</a>'
+            '<a href="/still-missing/">Still missing</a>',
+            encoding="utf-8",
+        )
+        result = scan(root, allow_external_prefixes=["/creator-gear-router/"])
+        missing = [f["detail"] for f in result["findings"] if f["kind"] == "missing_internal"]
+        self.assertEqual(missing, ["/still-missing/"])
+
+    def test_allowed_external_prefix_does_not_hide_relative_or_escape_paths(self):
+        root = self.make_site()
+        (root / "index.html").write_text(
+            '<a href="creator-gear-router/missing.html">relative remains local</a>'
+            '<a href="../creator-gear-router/secret.html">escape remains blocking</a>',
+            encoding="utf-8",
+        )
+        result = scan(root, allow_external_prefixes=["/creator-gear-router/"])
+        kinds = [f["kind"] for f in result["findings"]]
+        self.assertIn("missing_internal", kinds)
+        self.assertIn("path_escape", kinds)
+
     def test_sitemap_membership(self):
         root = self.make_site()
         (root / "index.html").write_text('<a href="notes/a.html">A</a>', encoding="utf-8")
