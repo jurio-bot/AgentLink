@@ -12,7 +12,7 @@
 - sitemapの不足や、opt-inのreverse target check
 - `noindex` はinformationalとして分離
 
-`srcset`ではdata URIをlocal fileとして誤判定しないよう除外します。通常のlocal candidateだけを内部asset検査へ流します。
+`srcset`ではdata URI候補だけをlocal file検査から除外し、同じ`srcset`に混在する通常のlocal candidateは引き続き内部asset検査へ流します。data URIが1つあるだけでresponsive candidate全体を見逃さないようにしています。
 
 ```bash
 python tools/site_surface_doctor.py ./site --sitemap sitemap.xml
