@@ -65,6 +65,16 @@ same-threadでCDP targetだけ変わったケースは別で、stable conversati
 
 この境界は、workerが長く残った時に「新しいOwnerへ乗り換えれば直る」と見せかけて、実際にはreceipt ownershipを壊す事故を防ぐためのもの。
 
+## 7. active workerを残したままOwnerをreleaseしない
+
+Owner差し替えだけでなく、manual clock-outや停止処理でも同じ境界を守る。
+
+active child workerが残っている間にOwnerだけreleaseすると、workerはactiveなのに統合先Ownerが存在しない状態になる。そのためCompany OSのrelease境界では、active workerが1件でもあればOwner releaseを拒否する。
+
+clock-outも先にtimecardをinactive化したりsupervisorを止めたりしない。release preflightが通った時だけclock-outをcommitする。blockされた場合は、現在のtimecardとsupervisorを維持してworkerがreceiptを返せる状態を残す。
+
+検証用temp worldでは、Owner + active workerの状態からreleaseを試すとblockされ、Ownerとworkerがそのまま維持された。worker完了後はreleaseが成功した。clock-outのtemp stateでもblock時にtimecardはactiveのまま、supervisor stopは呼ばれなかった。
+
 ## 今回の回帰テスト
 
 same-thread Owner bindingとlong-turn modeの関連テストを実行し、`5/5` PASSを確認した。
@@ -77,7 +87,7 @@ same-thread Owner bindingとlong-turn modeの関連テストを実行し、`5/5`
 4. optimistic revision conflictだけbounded retryする
 5. long-turn modeはexpiry前だけactiveになる
 
-追加でCompany OSの既存テスト群を再実行し、`12/12` PASSを確認した。ただしこの12本を、上のactive-worker rebind境界だけを単独保証する専用テスト数としては扱わない。
+追加でCompany OSの既存テスト群へOwner-release guardの回帰テストを加えて再実行し、`13/13` PASSを確認した。active worker中のrelease拒否と、worker完了後のrelease成功を同じテストで確認している。
 
 これはスループットのベンチマークではなく、Owner continuity境界の回帰テスト結果。
 
