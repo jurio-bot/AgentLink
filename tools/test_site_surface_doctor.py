@@ -124,6 +124,16 @@ class SiteSurfaceDoctorTests(unittest.TestCase):
         self.assertTrue(result["ok"])
         self.assertEqual(result["blocking_count"], 0)
 
+    def test_mixed_data_uri_and_local_srcset_keeps_local_checks(self):
+        root = self.make_site()
+        (root / "index.html").write_text(
+            '<img srcset="data:image/svg+xml,%3Csvg%3E 1x, missing@2x.webp 2x">',
+            encoding="utf-8",
+        )
+        result = scan(root)
+        self.assertFalse(result["ok"])
+        self.assertIn("missing@2x.webp", [f["detail"] for f in result["findings"]])
+
 
 if __name__ == "__main__":
     unittest.main()
