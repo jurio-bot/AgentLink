@@ -29,6 +29,7 @@ def _validate(records):
     if not isinstance(records, list) or not records:
         raise ValueError("input must be a non-empty JSON array")
     normalized = []
+    expected_dimensions = None
     for idx, row in enumerate(records):
         if not isinstance(row, dict):
             raise ValueError(f"record {idx}: expected object")
@@ -45,6 +46,16 @@ def _validate(records):
             if not 0 <= value <= 5:
                 raise ValueError(f"record {idx}: score {name!r} must be between 0 and 5")
             clean_scores[str(name)] = value
+        dimensions = frozenset(clean_scores)
+        if expected_dimensions is None:
+            expected_dimensions = dimensions
+        elif dimensions != expected_dimensions:
+            missing = sorted(expected_dimensions - dimensions)
+            extra = sorted(dimensions - expected_dimensions)
+            raise ValueError(
+                f"record {idx}: score dimensions must match the benchmark schema "
+                f"(missing={missing}, extra={extra})"
+            )
         normalized.append({"model": model, "category": category, "scores": clean_scores})
     return normalized
 
