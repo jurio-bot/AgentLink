@@ -57,11 +57,15 @@ python tools/site_surface_doctor.py ./site \
 
 The sitemap checks compare URL paths only, so the tool does not need network access or a configured production hostname.
 
-## Real-world example
+## Real-world examples
 
-The companion example documents a live maintenance pass where reverse sitemap validation initially produced false positives because one GitHub Pages hostname aggregated multiple project repositories. The implementation was narrowed after testing against the real deployment instead of assuming one checkout owned every same-origin URL.
+The first companion example documents a live maintenance pass where reverse sitemap validation initially produced false positives because one GitHub Pages hostname aggregated multiple project repositories. The implementation was narrowed after testing against the real deployment instead of assuming one checkout owned every same-origin URL.
 
-- [Read the real-world example](./SITE_SURFACE_DOCTOR_EXAMPLE.md)
+- [Read: reverse sitemap ownership example](./SITE_SURFACE_DOCTOR_EXAMPLE.md)
+
+A later recovery found the opposite failure mode: six sitemap routes still returned `200` from GitHub Pages even though their source had disappeared from the canonical main branch. Restoring the six pages plus fifteen same-origin assets reduced strict blocking findings from `6` to `0`; a fresh `origin/main` worktree matched all `21/21` captured files by SHA256 and all `21/21` public HTTP checks returned `200`.
+
+- [Read: GitHub Pages source / deploy drift recovery](../guides/github-pages-source-deploy-drift.md)
 
 ## Exit codes
 
