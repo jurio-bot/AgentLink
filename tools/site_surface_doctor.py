@@ -14,25 +14,41 @@ from urllib.parse import urlsplit
 
 def srcset_urls(value: str) -> list[str]:
     """Return ordinary URL candidates from srcset; data URI candidates are ignored."""
-    if not value:
-        return []
     urls: list[str] = []
-    in_data_candidate = False
-    for fragment in value.split(","):
-        candidate = fragment.strip()
-        if not candidate:
+    i = 0
+    length = len(value)
+    while i < length:
+        while i < length and (value[i].isspace() or value[i] == ","):
+            i += 1
+        if i >= length:
+            break
+
+        if value[i : i + 5].lower() == "data:":
+            # data: URLs contain one syntax comma between metadata and payload.
+            # Treat that first comma as part of the URL. After payload begins,
+            # the next comma is the candidate delimiter unless a descriptor
+            # starts first; in that case the delimiter follows the descriptor.
+            syntax_comma = value.find(",", i + 5)
+            if syntax_comma < 0:
+                break
+            j = syntax_comma + 1
+            while j < length and not value[j].isspace() and value[j] != ",":
+                j += 1
+            if j < length and value[j].isspace():
+                while j < length and value[j] != ",":
+                    j += 1
+            i = j + 1 if j < length else length
             continue
-        if in_data_candidate:
-            # A data URI may contain commas. Its descriptor is the first
-            # whitespace-delimited suffix, after which the next comma starts
-            # another srcset candidate.
-            if any(char.isspace() for char in candidate):
-                in_data_candidate = False
-            continue
-        if candidate.lower().startswith("data:"):
-            in_data_candidate = not any(char.isspace() for char in candidate)
-            continue
-        urls.append(candidate.split()[0])
+
+        start = i
+        while i < length and not value[i].isspace() and value[i] != ",":
+            i += 1
+        if i > start:
+            urls.append(value[start:i])
+        while i < length and value[i] != ",":
+            i += 1
+        if i < length:
+            i += 1
     return urls
 
 
