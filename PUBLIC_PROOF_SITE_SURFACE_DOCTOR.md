@@ -16,6 +16,8 @@
 
 The checker inspects ordinary local `srcset` candidates while ignoring inline `data:` candidates. A mixed `srcset` such as an inline placeholder plus a local 2x image must still validate the local file. This prevents an inline data URI from hiding a missing responsive asset.
 
+The parser also covers a descriptorless inline data candidate followed by a normal local candidate. The `data:` syntax comma is kept inside the inline candidate without swallowing the next responsive asset.
+
 Relevant public commits:
 
 - `cc4a064191b53032eb0bc4e35f8790c5841e3fae` — initial responsive `srcset` checks
@@ -24,12 +26,17 @@ Relevant public commits:
 - `a97b835a19519f9e54690489d8995040b3279fa2` — mixed data/local candidate handling
 - `0004bbb61052dea5f597103bc9180040d751a08f` — mixed candidate regression test
 - `3276a26e4801fcaa18a5052c60e30c4a31d5636c` — boundary documentation
+- `a478e89292db6900723374b43edd2e00afa8ff48` — descriptorless data candidate boundary parsing
+- `db7f18546a797ae5cef5f333463c351e9c240ebb` — descriptorless boundary regression test
 
 ## CI evidence
 
 GitHub Actions workflow: `.github/workflows/site-surface-doctor-tests.yml`
 
-Run `33316330533` completed successfully against head `b4ebd4704b80e0113af18730cbf957b9edb60730`.
+Verified runs:
+
+- `33316330533` — success on the mixed data/local candidate implementation and CI setup
+- `33316666276` — success on the descriptorless data URI boundary regression
 
 Local command:
 
