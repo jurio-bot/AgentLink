@@ -34,13 +34,16 @@ def validate(records, parse_errors):
     completed_provider_ids = []
     for lineno, row in records:
         key = row.get("idempotency_key")
-        status = str(row.get("status", "")).lower()
+        raw_status = row.get("status")
+        status = str(raw_status).strip().lower() if raw_status is not None else ""
         provider_id = row.get("provider_object_id") or row.get("provider_id")
         if not key:
             issues.append({"line": lineno, "kind": "missing_idempotency_key"})
         else:
             keys.append((lineno, str(key)))
-        if status and status not in TERMINAL and status not in {"pending", "running", "unknown"}:
+        if not status:
+            issues.append({"line": lineno, "kind": "missing_status"})
+        elif status not in TERMINAL and status not in {"pending", "running", "unknown"}:
             issues.append({"line": lineno, "kind": "unknown_status", "value": status})
         if status in {"completed", "succeeded"} and not provider_id:
             issues.append({"line": lineno, "kind": "completed_without_provider_id"})
