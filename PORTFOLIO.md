@@ -20,7 +20,7 @@ Good first engagements include:
 
 For Japanese teams: **AI自動化・Python/API連携・RAG・AIエージェントの小規模PoC／技術検証、ComfyUI系の画像生成ワークフロー検証、字幕・文字起こしQA、指定領域の動画ぼかし補助などを、業務委託・小さな有償トライアルから対応可能です。** 未確認の商用実績や顧客成果は誇張せず、公開デモとテストで確認できる範囲を起点に進めます。
 
-Fixed-price starting points and larger PoC scopes are listed below. For non-confidential inquiries, use the repository's [Paid Service Request](../../issues/new?template=paid-service-request.yml) or [Project Inquiry](../../issues/new?template=project-inquiry.yml) form.
+Fixed-price starting points and larger PoC scopes are listed below. For non-confidential inquiries, use the repository's [Paid Service Request](https://github.com/paper-daemon/AgentLink/issues/new?template=paid-service-request.yml) or [Project Inquiry](https://github.com/paper-daemon/AgentLink/issues/new?template=project-inquiry.yml) form.
 
 ## Technical demos
 
@@ -112,13 +112,20 @@ The broader 18-model by 6-test image benchmark is still incomplete and is not cl
 
 These tools support media-delivery work without claiming automatic editorial or privacy correctness. Human review remains part of the delivery boundary.
 
-### SRT Doctor
+### Subtitle Workbench / SRT Doctor
 
-Path: `tools/srt_doctor.py`
+Public proof:
 
-A dependency-free structural QA tool for SubRip subtitle files. It checks malformed cue blocks and indexes, invalid timing, empty text, non-positive duration, duplicate indexes, non-monotonic starts, and overlap between adjacent parsed cues. Optional pacing thresholds can be enabled when a client specification requires them rather than treating one reading-speed rule as universal.
+- [`paper-daemon/subtitle-workbench`](https://github.com/paper-daemon/subtitle-workbench)
+- `tools/srt_doctor.py`
 
-The tool has been hardened through GitHub review and CI-backed regression tests, including edge cases for malformed Python-style numeric indexes, extremely large indexes, reverse-ordered but disjoint cues, and non-finite pacing thresholds.
+The tools cover malformed cue blocks and indexes, invalid timing, empty text, non-positive duration, duplicate indexes, non-monotonic starts and overlap checks. Optional pacing rules are used only when a delivery specification requires them.
+
+### Creator Delivery Inspector
+
+Public proof: [`paper-daemon/creator-delivery-inspector`](https://github.com/paper-daemon/creator-delivery-inspector)
+
+A local ffprobe-based preflight tool for video/audio delivery metadata including dimensions, duration, codec, frame rate, sample rate, channels and expected streams.
 
 ### Video Redaction Filter Planner
 
@@ -131,10 +138,10 @@ Verified boundaries:
 - validates time ranges, coordinates, crop dimensions, and blur radius
 - rejects non-finite or structurally invalid inputs
 - supports multiple time-bounded blur regions in one filter graph
-- 8 focused unit tests and GitHub Actions coverage
+- focused unit tests and GitHub Actions coverage
 - does **not** perform face/person detection, tracking, automatic censoring decisions, network upload, or frame-by-frame correctness guarantees
 
-Service scopes that use these public tools are documented in [`MEDIA_QA_SERVICES.md`](./MEDIA_QA_SERVICES.md).
+Current service scopes are documented in [`MEDIA_QA_SERVICES.md`](./MEDIA_QA_SERVICES.md).
 
 ## Public reliability tools
 
@@ -189,40 +196,43 @@ See `guides/README.md` for implementation-oriented notes on:
 
 The incident recovery runbook follows a conservative sequence: freeze affected writes, classify side effects, reconcile uncertain provider outcomes, restore from trustworthy checkpoints, reacquire ownership, and resume only unfinished work.
 
-## Paid services
+## Paid products and services
 
-<!-- revenue-idempotency: lowticket-traffic-AL-CHK-001-portfolio-v1 -->
-### AI Automation Safety Checklist — ¥500
+### AI自動化 事故防止チェックリスト v2 — ¥500
 
-A low-cost downloadable starter for preventing duplicate execution, separating human approval boundaries, planning recovery, and keeping receipts/logs in AI automation workflows.
+Compact safety pack for duplicate execution, human approval boundaries, recovery and effect/idempotency logging.
 
 Details: [products/AL-CHK-001.md](./products/AL-CHK-001.md)
 
-Buy: https://buy.stripe.com/4gM3cu410bZ45staKDgEg0d
+### AI業務自動化 ヒアリング＆設計シート v2 — ¥980
+
+Canonical workflow-design pack for discovery, human gates, retry/receipt planning and KPI baseline design.
+
+Details: [products/AL-TPL-002.md](./products/AL-TPL-002.md)
+
+### AI Agent Handoff & Recovery Kit v2 — ¥1,980
+
+State-first continuity templates for checkpointing, worker leases, unknown-outcome reconciliation and cross-thread recovery.
+
+Details: [products/AI_AGENT_HANDOFF_RECOVERY_KIT.md](./products/AI_AGENT_HANDOFF_RECOVERY_KIT.md)
 
 ### AI Automation Opportunity Scan — ¥2,980
 
 Asynchronous review of one workflow or automation idea with candidate automations, difficulty, risks, and next actions.
 
-Buy: https://buy.stripe.com/14AdR8dBAd38g77f0TgEg06
-
 ### AI Agent / RAG Architecture Quick Audit — ¥9,800
 
 Architecture review, risk checklist, quality/operability gaps, prioritized next steps, and an implementation plan.
-
-Buy: https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05
 
 ### Agent Reliability & Recovery Review — ¥14,800
 
 Review focused on duplicate execution, idempotency, retries, failure recovery, worker leases, stale-owner recovery, receipts, and auditability.
 
-Buy: https://buy.stripe.com/8x2fZg4104wC9IJ4mfgEg08
-
 ### AI Automation Small PoC Starter — ¥29,800
 
 One narrow, non-production workflow PoC with requirements, boundary definition, a small executable prototype, basic validation, and handoff notes.
 
-Buy: https://buy.stripe.com/eVq9AS8hg8MS6wxbOHgEg07
+Current checkout links and exact scopes are kept in [`DIGITAL_PRODUCTS.md`](./DIGITAL_PRODUCTS.md) and [`SERVICES.md`](./SERVICES.md) so this portfolio does not duplicate pricing metadata unnecessarily.
 
 ### Larger PoCs
 
@@ -236,6 +246,6 @@ See `SERVICES.md`, `MEDIA_QA_SERVICES.md`, and `POC.md`.
 
 ## Contact / intake
 
-Use the [Paid Service Request](../../issues/new?template=paid-service-request.yml) form when you already know which review or PoC scope you want, or the [Project Inquiry](../../issues/new?template=project-inquiry.yml) form for a broader non-confidential discussion.
+Use the [Paid Service Request](https://github.com/paper-daemon/AgentLink/issues/new?template=paid-service-request.yml) form when you already know which review or PoC scope you want, or the [Project Inquiry](https://github.com/paper-daemon/AgentLink/issues/new?template=project-inquiry.yml) form for a broader non-confidential discussion.
 
 Do not post credentials, API keys, customer data, private URLs, contracts, proprietary datasets, or other confidential information in a public issue.
