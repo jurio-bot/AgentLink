@@ -13,13 +13,24 @@ from urllib.parse import urlsplit
 
 
 def srcset_urls(value: str) -> list[str]:
-    """Return ordinary URL candidates from srcset; data URIs are ignored."""
-    if not value or "data:" in value.lower():
+    """Return ordinary URL candidates from srcset; data URI candidates are ignored."""
+    if not value:
         return []
     urls: list[str] = []
-    for candidate in value.split(","):
-        candidate = candidate.strip()
+    in_data_candidate = False
+    for fragment in value.split(","):
+        candidate = fragment.strip()
         if not candidate:
+            continue
+        if in_data_candidate:
+            # A data URI may contain commas. Its descriptor is the first
+            # whitespace-delimited suffix, after which the next comma starts
+            # another srcset candidate.
+            if any(char.isspace() for char in candidate):
+                in_data_candidate = False
+            continue
+        if candidate.lower().startswith("data:"):
+            in_data_candidate = not any(char.isspace() for char in candidate)
             continue
         urls.append(candidate.split()[0])
     return urls
