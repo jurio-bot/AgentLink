@@ -1,43 +1,47 @@
-<!-- revenue-idempotency: lowticket-publish-AL-CHK-001-github-v1 -->
-<!-- revenue-checkout-idempotency: lowticket-connect-AL-CHK-001-stripe-github-v1 -->
-# AI自動化 事故防止チェックリスト
+<!-- revenue-idempotency: lowticket-publish-AL-CHK-001-github-v2 -->
+# AI自動化 事故防止チェックリスト v2
 
-価格: ¥500
+**¥500 / 1回払い**
 
-AI自動化や AI Agent / RAG を、小さく安全に始めるための実務向けチェックリストです。
-公開・検証済みの AgentLink の reliability / recovery 設計知見をベースにし、未検証の顧客成果や架空実績は含みません。
+AI自動化やAI Agentを動かす前後で、**二重実行・権限境界・人間確認・障害復旧**を短時間で点検するための小さな実務キットです。
 
-## 含まれるもの
+「AIだから安全」ではなく、外部副作用がある処理を普通の運用事故として扱うための最低限をまとめています。
 
-- 二重実行を防ぐ pre-flight checklist
-- 読み取り・送信・契約・送金などの権限境界
-- 失敗時の再開 / incident recovery flow
-- idempotency log テンプレート
-- action / result / error / timestamp / effect id の記録設計
-- KYC / OTP / CAPTCHA など、人間ゲートに残す項目の整理
-- 小さな導入例
+## v2に含まれるもの
 
-## 対象
+- `CHECKLIST.md` — 導入前後の安全チェック
+- `EFFECT_LEDGER.csv` — 外部副作用とidempotencyの記録
+- `HUMAN_GATES.md` — 契約・送金・本人確認など、人に残す操作
+- `RECOVERY_PLAYBOOK.md` — 成否不明・中断時の復旧順序
+- README
+- PDF版チェックリスト
 
-- AI導入をこれから始める個人・小規模チーム
-- 自動化を作ったが、復旧や二重実行が不安な人
-- RAG / Agent PoC を小さく安全に設計したい人
+## 使いどころ
+
+- API / webhook / Make / n8n / Pythonの小さな自動化
+- AI Agentがメール・ファイル・外部サービスを操作するPoC
+- timeout後に同じ操作を再実行してよいか迷う運用
+- 「どこから人が承認するか」を先に決めたい時
+
+## 基本ルール
+
+外部操作がtimeoutした時、**timeout = 失敗**とは限りません。先に履歴・receipt・外部側の状態を確認し、既に実行済みなら重複実行を避けます。
+
+KYC / OTP / CAPTCHA / 本人署名 / 法務・税務判断などは自動化対象として扱いません。
 
 ## 含まれないもの
 
-- 本番環境への無制限実装
-- KYC / 法務 / 税務判断
-- 成果保証
-- 非公開 AgentLink コアコード
-
-## 配布パッケージ
-
-`AL-CHK-001-ai-safety-checklist-v1.zip` として、README、pre-flight checklist、incident recovery flow、idempotency log CSV、automation boundary template、quick example をまとめています。
+- 本番環境への実装代行
+- セキュリティ監査の保証
+- 法務・税務・契約判断
+- 本人確認の代行
+- 障害ゼロ、売上、工数削減などの成果保証
+- 非公開AgentLinkコアコード
 
 ## 購入
 
-**¥500 / 1回払い** です。Stripe のホスト型決済ページから購入できます。
+[Stripeで購入する（¥500）](https://buy.stripe.com/4gM3cu410bZ45staKDgEg0d)
 
-[AI自動化 事故防止チェックリストを購入する（¥500）](https://buy.stripe.com/4gM3cu410bZ45staKDgEg0d)
+BOOTH / ココナラのコンテンツマーケットでもv2を公開しています。
 
-決済確認後、購入時のメールアドレスへ ZIP をお送りします。決済前に機密情報の提出は不要です。
+決済確認後に配布する正本は **v2** です。古いv1パッケージは新規納品の正本として扱いません。
