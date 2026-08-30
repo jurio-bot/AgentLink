@@ -48,6 +48,23 @@ workerごとに「何を触るか」を先にkey化する。
 
 待ち時間を伸ばすための空回しはしない。
 
+## 6. active workerを残したままOwnerを差し替えない
+
+新しいthread targetや次のOwner候補が見えても、現在のOwnerにactive workerが残っているなら先にOwner slotを解放しない。
+
+途中でOwnerだけ差し替えると、旧Owner IDを持つworkerのevidence / receiptを安全に統合できなくなる。Company OSのowner syncはこの状態を `owner_rebind_blocked_active_workers` として止める。
+
+rebindが必要な時の順番は次の通り。
+
+1. active workerの実状態を確認する
+2. 完了しているworkerはevidence + receiptで閉じる
+3. 未完ならcheckpointへ残して、勝手に別Ownerへ付け替えない
+4. worker poolが0になってから本当のOwner handoffを行う
+
+same-threadでCDP targetだけ変わったケースは別で、stable conversation URL + PARTが同じならOwnerを維持してbindingだけ更新する。
+
+この境界は、workerが長く残った時に「新しいOwnerへ乗り換えれば直る」と見せかけて、実際にはreceipt ownershipを壊す事故を防ぐためのもの。
+
 ## 今回の回帰テスト
 
 same-thread Owner bindingとlong-turn modeの関連テストを実行し、`5/5` PASSを確認した。
@@ -59,6 +76,8 @@ same-thread Owner bindingとlong-turn modeの関連テストを実行し、`5/5`
 3. 本当のthread handoffは同一Owner扱いしない
 4. optimistic revision conflictだけbounded retryする
 5. long-turn modeはexpiry前だけactiveになる
+
+追加でCompany OSの既存テスト群を再実行し、`12/12` PASSを確認した。ただしこの12本を、上のactive-worker rebind境界だけを単独保証する専用テスト数としては扱わない。
 
 これはスループットのベンチマークではなく、Owner continuity境界の回帰テスト結果。
 
