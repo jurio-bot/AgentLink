@@ -7,6 +7,7 @@ import json
 import os
 import subprocess
 import sys
+import stat
 from pathlib import Path
 
 KEYS = ("XDG_RUNTIME_DIR", "DBUS_SESSION_BUS_ADDRESS")
@@ -22,7 +23,14 @@ def _unix_bus_path(address: str) -> str | None:
     return None
 
 
-def diagnose_env(env: dict[str, str], exists=os.path.exists) -> list[dict]:
+def _is_unix_socket(path: str) -> bool:
+    try:
+        return stat.S_ISSOCK(os.stat(path).st_mode)
+    except OSError:
+        return False
+
+
+def diagnose_env(env: dict[str, str], exists=os.path.exists, is_socket=_is_unix_socket) -> list[dict]:
     checks: list[dict] = []
     runtime = env.get("XDG_RUNTIME_DIR", "").strip()
     if not runtime:
@@ -40,6 +48,8 @@ def diagnose_env(env: dict[str, str], exists=os.path.exists) -> list[dict]:
         bus_path = _unix_bus_path(bus)
         if bus.startswith("unix:path=") and bus_path and not exists(bus_path):
             checks.append({"check": "DBUS_SESSION_BUS_ADDRESS", "status": "error", "detail": f"socket path missing: {bus_path}"})
+        elif bus_path and not is_socket(bus_path):
+            checks.append({"check": "DBUS_SESSION_BUS_ADDRESS", "status": "error", "detail": f"path is not a unix socket: {bus_path}"})
         elif bus_path:
             checks.append({"check": "DBUS_SESSION_BUS_ADDRESS", "status": "ok", "detail": f"unix socket: {bus_path}"})
         elif bus.startswith("unix:abstract="):
@@ -71,8 +81,8 @@ def probe_systemd_user(timeout: float = 3.0) -> dict:
     return {"status": "ok", "detail": "systemd user manager reachable", "environment": manager_env}
 
 
-def build_report(env: dict[str, str], probe: dict | None = None, exists=os.path.exists) -> dict:
-    checks = diagnose_env(env, exists=exists)
+def build_report(env: dict[str, str], probe: dict | None = None, exists=os.path.exists, is_socket=_is_unix_socket) -> dict:
+    checks = diagnose_env(env, exists=exists, is_socket=is_socket)
     if probe is not None:
         checks.append({"check": "systemd_user_manager", "status": probe["status"], "detail": probe["detail"]})
     errors = [c for c in checks if c["status"] == "error"]
