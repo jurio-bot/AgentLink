@@ -1,91 +1,24 @@
 # AgentLink
 
-**Persistent, permissioned, recoverable execution infrastructure for AI workers.**
+**Persistent, permissioned, recoverable execution infrastructure for long-running AI workers.**
 
-> **For freelancers:** [Freelance Job Tracker Kit — ¥780](./products/FREELANCE_JOB_TRACKER_KIT.md)
->
-> **For spreadsheet delivery:** [Spreadsheet QA Kit — ¥580](./products/SPREADSHEET_QA_KIT.md)
->
-> **For research & fact-checking:** [Research Source Log Kit — ¥480](./products/RESEARCH_SOURCE_LOG_KIT.md)
->
-> **For safer AI automation:** [AI Automation Safety Checklist — ¥500](./products/AL-CHK-001.md)
->
-> **Free starting point:** [AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)
->
-> **DIY planning kit:** [AI Automation Quickstart Kit — ¥980](./DIGITAL_PRODUCTS.md)
->
-> **Start small:** [AI Automation Opportunity Scan — ¥2,980](https://buy.stripe.com/14AdR8dBAd38g77f0TgEg06)
->
-> **Need a technical second opinion?** [AI Agent / RAG Architecture Quick Audit — ¥9,800](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)
->
-> **Need a reliability / recovery review?** [Agent Reliability & Recovery Review — ¥14,800](https://buy.stripe.com/8x2fZg4104wC9IJ4mfgEg08)
->
-> **Want a working proof?** [AI Automation Small PoC Starter — ¥29,800](https://buy.stripe.com/eVq9AS8hg8MS6wxbOHgEg07)
->
-> **Support AgentLink:** [Flexible project support](https://buy.stripe.com/7sYeVcbtsgfk6wxbOHgEg00) · [Supporter ¥500/mo](https://buy.stripe.com/00w6oG7dc9QW7ABg4XgEg01) · [Builder Patron ¥1,500/mo](https://buy.stripe.com/eVq14m4102oubQR6ungEg02) · [Infrastructure Patron ¥5,000/mo](https://buy.stripe.com/dRm6oG554d385stf0TgEg03)
->
-> Support is non-equity project/patron support. It does not provide shares, investment returns, tokens, tax-deductible charitable treatment, exclusivity, or rights to AgentLink core IP.
+AgentLink explores the execution layer between AI reasoning and real operational work: keeping jobs alive across interruptions, bounding authority, coordinating workers, avoiding duplicate external side effects, and leaving enough evidence to recover safely.
 
-AgentLink is an early-stage AI execution platform exploring how AI agents can continue useful work across computers, mobile/edge devices, cloud workers, and business services without losing execution state, authority boundaries, or recovery context.
-
-> This repository is a public product / technical showcase. The production core is private and is **not** published here.
-
-## Practical freelancer & data packs
-
-These lightweight products are intentionally useful outside AI engineering work and can be used with ordinary CSV / Markdown tools.
-
-- **[Freelance Job Tracker Kit — ¥780](./products/FREELANCE_JOB_TRACKER_KIT.md)** — track applications, client chats, deadlines, delivery state, and follow-ups across multiple freelance platforms.
-- **[Spreadsheet QA Kit — ¥580](./products/SPREADSHEET_QA_KIT.md)** — pre-handoff checks and a simple delivery/revision log for CSV, Excel, and Google Sheets work.
-- **[Research Source Log Kit — ¥480](./products/RESEARCH_SOURCE_LOG_KIT.md)** — source log, fact-check checklist, and evidence-aware handoff template for research, writing, and virtual-assistant work.
-- **[CSV Doctor — free OSS](./tools/csv-doctor/)** — zero-dependency Python CLI for common CSV/TSV structural checks before handoff.
-
-The paid kits are delivered after verified successful Stripe payment. They are workflow aids and do not guarantee income, client acceptance, or business outcomes.
-
-## Revenue-ready service ladder
-
-AgentLink currently offers a low-friction path from first assessment to implementation:
-
-0. **Free AI Automation Readiness Checklist**  
-   [Use the checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)  
-   A conservative 20-point preflight for workflow clarity, access, reliability, and business fit.
-
-1. **AI Automation Quickstart Kit — ¥980**  
-   [See the kit](./DIGITAL_PRODUCTS.md)  
-   DIY scorecard, PoC planning canvas, API preflight, reliability/recovery checklist, and ROI estimator.
-
-2. **AI Automation Opportunity Scan — ¥2,980**  
-   [Buy now](https://buy.stripe.com/14AdR8dBAd38g77f0TgEg06)  
-   Async review of one workflow or idea with automation candidates, difficulty, risks, and next actions.
-
-3. **AI Agent / RAG Architecture Quick Audit — ¥9,800**  
-   [Buy now](https://buy.stripe.com/00w7sK7dc4wCf33f0TgEg05)  
-   Architecture review, risk checklist, quality/operability gaps, prioritized next steps, and implementation plan.
-
-4. **Agent Reliability & Recovery Review — ¥14,800**  
-   [Buy now](https://buy.stripe.com/8x2fZg4104wC9IJ4mfgEg08)  
-   Operational reliability review covering duplicate-execution risk, idempotency, retries, failure recovery, checkpoints, worker leases, stale-owner recovery, and receipt/audit design. Implementation is outside this fixed review scope.
-
-5. **AI Automation Small PoC Starter — ¥29,800**  
-   [Buy now](https://buy.stripe.com/eVq9AS8hg8MS6wxbOHgEg07)  
-   One narrow, non-production workflow: requirements, boundary definition, small executable prototype, basic validation, and handoff notes. Production deployment, ongoing operation, extra integrations, and large-scale data work are outside this fixed scope.
-
-6. **Larger Python / API / RAG / multi-agent PoCs**  
-   See [SERVICES.md](./SERVICES.md) and [request a paid service or PoC](../../issues/new?template=paid-service-request.yml).
+> This public repository is a technical showcase and evidence surface. The production core is private and is **not** published here.
 
 ## Why AgentLink exists
 
-AI models are becoming strong planners and tool users. Real operational work still becomes fragile when it crosses sessions, devices, networks, services, and authorization boundaries.
+Models are increasingly capable planners and tool users. Operational work still becomes fragile when it crosses sessions, devices, services, browser state, approvals, network failures, and long-running worker handoffs.
 
-AgentLink focuses on the layer between **AI reasoning** and **reliable execution**:
+AgentLink focuses on five properties:
 
-- durable work continuity
-- heterogeneous worker orchestration
-- failure recovery and route failover
-- scoped approvals and authority
-- action receipts and operational state
-- parallel worker coordination
+- **continuity** — work can resume from durable state instead of one chat window
+- **bounded authority** — workers operate inside explicit capabilities and human gates
+- **idempotency** — uncertain outcomes are reconciled instead of blindly replayed
+- **coordination** — multiple workers can own separate lanes without duplicating work
+- **evidence** — important actions leave receipts, checkpoints, tests or other verifiable state
 
-## Concept
+## Architecture
 
 ```mermaid
 flowchart LR
@@ -95,7 +28,7 @@ flowchart LR
     B --> E[Cloud Worker]
     B --> F[Business Services]
     B --> G[Approval / Policy Gate]
-    C --> H[Receipts + State]
+    C --> H[Receipts + Durable State]
     D --> H
     E --> H
     F --> H
@@ -103,148 +36,114 @@ flowchart LR
     H --> B
 ```
 
-The goal is not to replace foundation models. AgentLink is intended to make multiple models and agents more useful by giving them a persistent execution substrate.
+The goal is not to replace foundation models. The goal is to make them more useful when work must survive real-world execution boundaries.
 
-## What is already being explored
+## Public proof surfaces
 
-The private implementation currently spans several directions, including:
+The public repository contains deliberately bounded demonstrations, documentation and case studies rather than the production runtime.
 
-- Android / PC / gateway integration
-- persistent sessions and job state
-- local and cloud worker execution
-- execution receipts and replay concepts
-- capability leases and worker availability
-- failure recovery and stale-owner recovery
-- multi-route execution
+- **[Receipt Replay Simulator](./demos/receipt-replay-simulator/)** — demonstrates conservative recovery for completed, not-started and uncertain actions
+- **[RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md)** — isolated agent configuration, routing, validation, health reporting and an automated test suite
+- **[Architecture notes](./ARCHITECTURE.md)** — execution-layer design and boundaries
+- **[Technical proofs](./TECHNICAL_PROOFS.md)** — public evidence for selected implementation claims
+- **[Security boundary](./SECURITY.md)** — what is intentionally not exposed
+
+Public claims should be backed by implementation evidence, tests, receipts, or a reproducible demo. If evidence is not available, the claim should stay narrow.
+
+## Current engineering directions
+
+The private implementation currently spans areas such as:
+
+- persistent job and thread state
+- local / remote worker execution
+- Android, PC and gateway integration
+- execution receipts and replay prevention
+- worker leases and stale-owner recovery
+- multi-route execution and fallback
 - permission / approval boundaries
-- parallel work lanes and conflict-control research
+- parallel work lanes and conflict control
+- browser and service recovery
+- long-turn Company OS experiments
 
-Only claims that can be backed by implementation evidence are used in external discussions.
+These are active engineering directions, not promises that every surface is production-ready.
 
-## First public technical demo
+## Reliability model
 
-A deliberately simplified, standalone reliability demo is now public:
+A central rule is simple: **unknown is not the same as failed**.
 
-**[Receipt Replay Simulator](./demos/receipt-replay-simulator/)**
+When an external action is interrupted, recovery should prefer:
 
-It demonstrates a conservative recovery rule for interrupted actions:
+1. read back durable state or a receipt
+2. determine whether the side effect already happened
+3. resume from the latest valid checkpoint
+4. retry only when duplicate execution is safe or ruled out
 
-- completed receipt → skip duplicate execution
-- not-started receipt → retry
-- uncertain receipt → reconcile instead of blindly replaying
+This is why AgentLink treats checkpoints, idempotency keys, effect receipts and human gates as first-class execution state rather than logging afterthoughts.
 
-The demo is intentionally separate from production AgentLink and contains no private infrastructure or authorization implementation.
+## AI-native Company OS thesis
 
-## Validated services and case study
+AgentLink is also used as an internal operating substrate for AI workers. The goal is to test the execution model under real workloads before turning selected capabilities into reusable products or services.
 
-AgentLink is also turning selected verified capabilities into small paid engineering offers without publishing the private production core.
+A Company OS lane can own durable work, hand bounded tasks to child workers, collect evidence, survive thread or browser loss, and continue from state instead of relying on one conversation URL.
 
-- **[AI automation / RAG / agent service scopes](./SERVICES.md)**
-- **[Request a paid service or PoC](../../issues/new?template=paid-service-request.yml)**
-- **[RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md)** — 10 isolated agent configurations with routing, validation, health reporting, and **5 automated tests passed**
+Human operators remain responsible for legal accountability, governance, sensitive approvals, identity-bound actions and other authority that should not be delegated.
 
-Public claims are limited to work that has implementation or test evidence. Larger PoCs require scope confirmation before work begins.
+## Open tools and practical packs
 
-## Company thesis
+Selected small tools and workflow packs are published separately when they are useful outside the private AgentLink runtime.
 
-AgentLink is also being developed around an **AI-native company** thesis: use the platform internally as the operating substrate for AI workers before commercializing selected capabilities externally.
+- [Public tools / portfolio](https://paper-daemon.github.io/portfolio/)
+- [Finder hub](https://paper-daemon.github.io/finders.html)
+- [Service scopes](./SERVICES.md)
+- [Digital products](./DIGITAL_PRODUCTS.md)
+- [Free AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)
 
-Human operators remain responsible for legal accountability, governance, sensitive approvals, and other actions that require human authority.
+The public catalog includes ordinary CSV, subtitle, repository-health, automation-safety and creator-workflow tools as well as AI-agent material. Small tools can stay small, but they should have a clear purpose, usable instructions, explicit boundaries and a reproducible verification path when applicable.
 
-The intended company structure and legal entity are still being prepared. `AgentLink` is currently used here as the project / product name.
+## Paid engineering scope
 
-## Enterprise design-partner PoCs
+Paid work is kept separate from technical claims. Current scopes are listed in **[SERVICES.md](./SERVICES.md)** and may include narrow automation reviews, reliability / recovery reviews, RAG / agent architecture work and bounded proof-of-concept implementation.
 
-We are exploring three initial paid PoC patterns:
-
-1. **Persistent AI Operations Worker**
-   - multi-step business workflow
-   - interruption recovery
-   - measurable reduction in manual intervention
-
-2. **Secure Agent Execution Gateway**
-   - controlled execution environment
-   - scoped action permissions
-   - approval and audit receipts
-
-3. **Multi-Agent Business Operations Cell**
-   - coordinated workers around one narrow objective
-   - explicit lane ownership
-   - conflict and duplicate-work reduction
-
-See [POC.md](./POC.md).
+Fixed-price offers define what is included and excluded. Larger work requires scope confirmation before implementation. Payment does not turn an experimental capability into a production guarantee.
 
 ## R&D themes
 
-Current technical questions include:
+Current questions include:
 
 - how to fail over without duplicating external side effects
-- how authority should survive, narrow, expire, or revoke across worker migration
-- how to recover long-running jobs without replaying already-completed actions
-- how parallel workers coordinate without globally serializing all useful work
-- how execution state stays compact enough for long-horizon operation
+- how authority should survive, narrow, expire or revoke across worker migration
+- how to recover long-running jobs without replaying completed actions
+- how parallel workers coordinate without globally serializing useful work
+- how to keep execution state compact enough for long-horizon operation
+- how to separate model reasoning from durable operational truth
 
-See [ARCHITECTURE.md](./ARCHITECTURE.md) and [TECHNICAL_PROOFS.md](./TECHNICAL_PROOFS.md).
+See [ARCHITECTURE.md](./ARCHITECTURE.md), [TECHNICAL_PROOFS.md](./TECHNICAL_PROOFS.md) and [ROADMAP.md](./ROADMAP.md).
 
 ## What is intentionally not public
 
-The following remain private:
+The public repository does **not** contain:
 
-- production source code
-- internal endpoints and host information
-- credentials, tokens, secrets, and private URLs
-- detailed authorization implementation
-- customer / user data
-- internal operational runbooks that would materially increase attack surface
+- production AgentLink source code
+- credentials, tokens, secrets or private URLs
+- internal host / network details
+- detailed authorization internals that would materially increase attack surface
+- private customer or user data
+- internal operational state and sensitive runbooks
 
 See [SECURITY.md](./SECURITY.md).
 
 ## Current stage
 
-AgentLink is in an early product / pre-seed stage. Priorities are:
+AgentLink is an early-stage platform and R&D project. Current priorities include repeatable onboarding, reliability measurement, security hardening, bounded commercial use cases, public proof quality and clearer separation between experimental research and stable reusable tools.
 
-- repeatable third-party onboarding
-- enterprise security hardening
-- measurable reliability tests
-- design partners and paid PoCs
-- company / IP structuring
-- non-dilutive R&D funding and seed financing
+## Support and collaboration
 
-See [ROADMAP.md](./ROADMAP.md).
+For a non-confidential engineering inquiry, design-partner discussion, technical collaboration or project support, use the public service/contact surfaces linked above or open a GitHub Issue where appropriate.
 
-## Looking for
-
-- enterprise design partners with a safe, measurable AI-agent workload
-- AI infrastructure / enterprise software investors
-- individual patrons and long-term supporters
-- corporate sponsors and strategic patrons
-- cloud / compute / model ecosystem partners
-- hardware, GPU, cloud-credit, and security-review support
-- technical collaborators interested in reliable agent execution
-
-## Support, patronage, and sponsorship
-
-Live support channels are open:
-
-- **Flexible project support:** [choose an amount](https://buy.stripe.com/7sYeVcbtsgfk6wxbOHgEg00)
-- **Supporter:** [¥500 / month](https://buy.stripe.com/00w6oG7dc9QW7ABg4XgEg01)
-- **Builder Patron:** [¥1,500 / month](https://buy.stripe.com/eVq14m4102oubQR6ungEg02)
-- **Infrastructure Patron:** [¥5,000 / month](https://buy.stripe.com/dRm6oG554d385stf0TgEg03)
-
-AgentLink also welcomes corporate sponsorship, cloud / GPU credits, hardware, security or legal support, introductions, and design-partner collaboration.
-
-These channels are for non-equity support. They are not presented as charitable donations and do not imply tax deductibility, equity, investment returns, tokens, exclusivity, or rights to AgentLink core IP.
-
-See [SUPPORT.md](./SUPPORT.md) for details.
-
-## Contact
-
-For investment, partnership, sponsorship, patronage, design-partner discussions, or a non-confidential automation / AI engineering inquiry, open a GitHub Issue or contact the project owner through the GitHub profile associated with this repository.
-
-Do not post credentials, API keys, personal data, proprietary datasets, or other confidential information in a public issue.
+Do not post credentials, API keys, personal data, proprietary datasets or other confidential information in a public issue.
 
 ## Repository status
 
-This public repository is a **showcase and documentation repository**, not the production AgentLink source tree.
+This repository is a **public showcase and documentation repository**, not the production AgentLink source tree.
 
-No license is granted to unpublished AgentLink core code. Content in this repository remains subject to the terms in [NOTICE.md](./NOTICE.md).
+No license is granted to unpublished AgentLink core code. Public repository content remains subject to [NOTICE.md](./NOTICE.md).
