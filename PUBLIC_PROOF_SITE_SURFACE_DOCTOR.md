@@ -26,6 +26,12 @@ Static portfolios often link real delivery samples through `<video>`, `<audio>`,
 
 This matters for proof pages such as a motion sample: the HTML page can exist and all ordinary links can pass while the actual MP4, caption track, poster, or embedded local frame is missing. Site Surface Doctor now fails that case instead of reporting a clean surface.
 
+## Verified cross-repo Pages boundary
+
+A GitHub Pages user site can link root-relative paths that are actually served by sibling project repositories, such as `/creator-gear-router/`. Those files are intentionally absent from the user-site checkout, so treating every such path as a local missing file creates a false positive.
+
+The checker stays strict by default. A sibling project path is exempt from local file-existence checks only when its root-relative prefix is explicitly supplied with `--allow-external-prefix`. Relative links are still treated as local, and path escapes remain blocking. This option does not verify that the external project is online; it only records that the selected checkout does not own that namespace.
+
 Relevant public commits:
 
 - `cc4a064191b53032eb0bc4e35f8790c5841e3fae` — initial responsive `srcset` checks
@@ -38,6 +44,8 @@ Relevant public commits:
 - `db7f18546a797ae5cef5f333463c351e9c240ebb` — descriptorless boundary regression test
 - `cb9085d5e71964a00f6c2e8cd8873f5c45f9c04d` — embedded media, frame, and poster asset checks
 - `62d82ccf49128670bf6b5f1f5b6fa6910f01e491` — embedded media regression test
+- `43c64e005f5285eee3e8eea1376755ed02b084a5` — explicit sibling Pages prefix allowance
+- `aa34b7d4c48430004df014f9cb62743549d7a126` — cross-repo Pages boundary regression tests
 
 ## CI evidence
 
@@ -48,6 +56,7 @@ Verified runs:
 - `33316330533` — success on the mixed data/local candidate implementation and CI setup
 - `33316666276` — success on the descriptorless data URI boundary regression
 - `33317730012` — success on embedded media, frame, and poster asset regression coverage
+- `33318516143` — success on explicit cross-repo Pages prefix boundary coverage
 
 Local command:
 
@@ -60,9 +69,10 @@ python -m unittest -v test_site_surface_doctor.py
 
 ```bash
 python tools/site_surface_doctor.py ./site --sitemap sitemap.xml
+python tools/site_surface_doctor.py ./site --sitemap sitemap.xml --allow-external-prefix /creator-gear-router/
 python tools/site_surface_doctor.py ./site --sitemap sitemap.xml --require-local-sitemap-targets --json
 ```
 
 ## Boundaries
 
-A clean result means the locally inspectable static surface passed the selected checks. It does not verify external HTTP availability, DNS, CDN behavior, search-engine indexing, browser rendering correctness, accessibility quality, or business/content correctness. The checker does not modify the site or make external network requests.
+A clean result means the locally inspectable static surface passed the selected checks. It does not verify external HTTP availability, DNS, CDN behavior, search-engine indexing, browser rendering correctness, accessibility quality, or business/content correctness. An allowed external prefix means only that the path is intentionally owned outside the selected checkout; availability still requires a separate readback. The checker does not modify the site or make external network requests.
