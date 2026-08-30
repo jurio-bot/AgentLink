@@ -134,6 +134,16 @@ class SiteSurfaceDoctorTests(unittest.TestCase):
         self.assertFalse(result["ok"])
         self.assertIn("missing@2x.webp", [f["detail"] for f in result["findings"]])
 
+    def test_descriptorless_data_uri_does_not_swallow_next_local_candidate(self):
+        root = self.make_site()
+        (root / "index.html").write_text(
+            '<img srcset="data:image/svg+xml,%3Csvg%3E, missing@2x.webp 2x">',
+            encoding="utf-8",
+        )
+        result = scan(root)
+        self.assertFalse(result["ok"])
+        self.assertIn("missing@2x.webp", [f["detail"] for f in result["findings"]])
+
 
 if __name__ == "__main__":
     unittest.main()
