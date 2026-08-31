@@ -1,94 +1,57 @@
 # Services by AI usage
 
-The catalog is split by the customer's starting point. The same deliverable can have very different value depending on whether the customer uses AI at all, uses only free AI, or already pays for a capable model.
+The public work catalog is at https://paper-daemon.github.io/work.html.
 
-## Trials
+## Trial rule
 
-Trials are not consultation-only products. If the issue is narrow enough, they include one real fix. When the customer continues with the same issue or project, the trial fee is deducted from the main service price.
+Trials are small real jobs, not consultation bait. If the request is narrow enough, one thing gets actually fixed/finished. If the customer continues with the same issue/project, the trial fee is credited against the main service.
 
-### PCおためし診断・1修正 — ¥980
-Checkout: https://book.stripe.com/7sY6oG9lk0gm6wx8CvgEg0x
+### Trials
 
-One concrete Windows/Linux symptom. Inspect it and, when the cause is narrow enough, apply one safe settings/software fix and verify the basic result.
+- PC diagnosis + 1 fix — ¥980 — https://book.stripe.com/7sY6oG9lk0gm6wx8CvgEg0x
+- Web 1-place fix — ¥1,480 — https://book.stripe.com/3cIcN4dBA7IOaMNdWPgEg0y
+- Spreadsheet 1-place fix — ¥980 — https://book.stripe.com/aFa6oG9lk0gm5st3ibgEg0A
+- Audio 1-file / 3-min finish — ¥980 — https://book.stripe.com/bJeeVcdBA5AG4op8CvgEg0B
+- Image 1-file finish — ¥980 — https://book.stripe.com/bJe14mcxw1kq8EF6ungEg0C
+- Video 30-sec finish — ¥1,480 — https://book.stripe.com/bJe9ASapobZ4f339GzgEg0D
+- Product page 1-item finish — ¥1,280 — https://book.stripe.com/7sYcN4bts3sy8EF1a3gEg0E
+- Automation 1-fix — ¥1,980 — https://book.stripe.com/7sY3cu7dce7caMN2e7gEg0z
 
-### Webおためし1か所修正 — ¥1,480
-Checkout: https://book.stripe.com/3cIcN4dBA7IOaMNdWPgEg0y
+## 1. People who do not use AI
 
-One visible issue on a small site. Reproduce it and, when it is bounded, make one HTML/CSS/JavaScript or publishing-settings fix and verify the page.
+They buy completion, not AI education.
 
-### Automationおためし1件修正 — ¥1,980
-Checkout: https://book.stripe.com/7sY3cu7dce7caMN2e7gEg0z
+- Spreadsheet 1-file fix — ¥3,800 — https://book.stripe.com/cNi14m1SSfbg6wx2e7gEg0F
+- Audio 1-file finish — ¥3,800 — https://book.stripe.com/aFacN4dBA3syf335qjgEg0G
+- Image 5-file finish — ¥3,800 — https://book.stripe.com/5kQ00ieFE5AG6wxdWPgEg0H
+- Product page 1-item finish — ¥4,800 — https://book.stripe.com/4gM7sK9lk7IOdYZ6ungEg0I
+- PC troubleshooting — ¥6,800 — https://book.stripe.com/cNiaEW1SS9QWf336ungEg0o
+- Video 1-file finish — ¥7,800 — https://book.stripe.com/aFacN4btsd38dYZbOHgEg0q
+- Small Web repair — ¥9,800 — https://book.stripe.com/cNicN4cxwfbg7ABdWPgEg0p
 
-One reproducible automation/AI-flow problem. If the cause is narrow, make one small code/configuration fix and run a representative check.
+## 2. People who use AI but do not pay for a subscription
 
-## 1. For people who do not use AI
+These are bounded one-off access products below a monthly paid-AI commitment.
 
-### PCトラブル解決スプリント — ¥6,800
-Checkout: https://book.stripe.com/cNiaEW1SS9QWf336ungEg0o
+- Writing finish — ¥1,480 — https://buy.stripe.com/eVq00ieFEd38g771a3gEg0s
+- Web research — ¥1,980 — https://buy.stripe.com/7sY7sK2WW2oug772e7gEg0r
+- Content pack — ¥2,480 — https://buy.stripe.com/fZu7sKapo2oubQRbOHgEg0t
 
-Windows / Linuxの主要トラブル1件を、状況確認、切り分け、範囲内での設定/ソフトウェア修正、基本動作確認まで進めます。
+## 3. People who already pay for AI
 
-### 小規模Web修正スプリント — ¥9,800
-Checkout: https://book.stripe.com/cNicN4cxwfbg7ABdWPgEg0p
+Prompt-only output is not a product for this segment. Fixed-price work stays narrow and below ¥10,000. Larger work is quoted only after real scope is visible.
 
-小規模なHTML/CSS/JavaScriptサイトやGitHub Pages等の主要な不具合1〜3件を、再現、修正、公開確認まで進めます。
-
-### 動画仕上げパック — ¥7,800
-Checkout: https://book.stripe.com/aFacN4btsd38dYZbOHgEg0q
-
-支給動画1本（目安10分まで）に、簡単なカット、支給字幕、指定箇所の静的ぼかし/モザイク、基本音量調整、書き出しと納品前確認を行います。
-
-## 2. For people who use AI but do not pay for a subscription
-
-These are one-off access products, deliberately below a monthly paid-AI commitment.
-
-### 有料AIリサーチ代行 1回券 — ¥1,980
-Checkout: https://buy.stripe.com/7sY7sK2WW2oug772e7gEg0r
-
-テーマ1件を最新Web情報で調べ、主要論点、比較、注意点、参考リンクをまとめます。
-
-### 有料AI文章仕上げ 1回券 — ¥1,480
-Checkout: https://buy.stripe.com/eVq00ieFEd38g771a3gEg0s
-
-メモ、下書き、長文テキスト1件を、用途に合わせて整理・推敲し、完成稿へ仕上げます。
-
-### 有料AI発信パック 1回券 — ¥2,480
-Checkout: https://buy.stripe.com/fZu7sKapo2oubQRbOHgEg0t
-
-商品・サービス・活動テーマ1件から、紹介文1本、SNS投稿5本、タイトル案10個、FAQ案を一式で作ります。
-
-## 3. For people who already pay for AI
-
-Prompt-only output is not a product for this segment. Fixed-price work stays below ¥10,000 and is intentionally narrow. Larger jobs are scoped after looking at the real code/environment instead of competing with a Pro subscription as a generic checkout item.
-
-### Automation Bug Fix — ¥4,800
-Checkout: https://book.stripe.com/28EaEW410gfk6wx05ZgEg0u
-
-One reproducible automation / AI workflow bug. Inspect real code/config/logs, isolate the issue, patch the bounded failure, and run a representative verification test.
-
-### Automation 1-Connection Setup — ¥7,800
-Checkout: https://book.stripe.com/14A7sK0OO3sycUV1a3gEg0w
-
-Connect one API, SaaS service, or local process to an existing flow. Implement one trigger or input/output path, configure it, and verify with representative data.
-
-### Agent / RAG Reliability Patch — ¥8,800
-Checkout: https://book.stripe.com/4gM00ifJI9QW2gh9GzgEg0v
-
-For one existing Agent/RAG/automation flow, implement only the reliability pieces actually needed: retry boundaries, idempotency, duplicate protection, reconciliation, resume points, or logging, then test a representative failure path.
-
-## Larger work
-
-No fixed ¥30,000 AI checkout. Larger automation, multi-service integration, production deployment, or broad rebuilds are quoted only after the environment, acceptance conditions, and actual work are visible.
+- Automation Bug Fix — ¥4,800 — https://book.stripe.com/28EaEW410gfk6wx05ZgEg0u
+- Automation 1-Connection Setup — ¥7,800 — https://book.stripe.com/14A7sK0OO3sycUV1a3gEg0w
+- Agent / RAG Reliability Patch — ¥8,800 — https://book.stripe.com/4gM00ifJI9QW2gh9GzgEg0v
 
 ## Quality rule
 
-- Trials must include real work when the issue is bounded; diagnosis-only bait is not the goal.
-- AI non-users buy completion, not AI education.
-- Free-AI users can buy one-off access below a monthly-subscription-sized commitment.
-- Paid-AI users are never sold something they can reasonably regenerate in a chat window.
-- Fixed-price paid-AI work stays narrow enough that outsourcing one annoying job is cheaper than changing the customer's subscription strategy.
-- Larger prices must correspond to real implementation effort after scope is known.
-- No fabricated results, reviews, adoption numbers, or performance guarantees.
+- Never sell a paid-AI user something they can reasonably regenerate in a chat window.
+- Trials must do real work when the issue is bounded.
+- Higher prices must correspond to real files, devices, code, environments, integration, deployment, recovery, verification, or meaningful production effort.
+- No fabricated users, reviews, adoption numbers, revenue, or performance guarantees.
+- Larger automation / multi-service integration / production rebuilds are quote-only after environment and acceptance conditions are known.
 
 ## Public engineering proof
 
