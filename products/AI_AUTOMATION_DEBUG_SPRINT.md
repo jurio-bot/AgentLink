@@ -1,33 +1,31 @@
-# AI Automation Debug Sprint
+# Automation Debug & Recovery Sprint
 
-A bounded diagnosis-and-fix pass for one existing AI/LLM automation failure.
+**¥9,800 one-time**  
+[Checkout](https://buy.stripe.com/8x214meFE4wC5st7yrgEg0g)
 
-## Good fit
-
-- inconsistent or incomplete LLM responses
-- structured JSON parsing failures
-- API integration or timeout/retry problems
-- n8n / Make / Python workflow edges
-- duplicate side effects after retries or restarts
-- an existing workflow that mostly works but needs focused stabilization
+One existing automation / AI workflow, one concrete failure. The job is to work on the real thing, not to return a generic review.
 
 ## Included
 
-1. Reproduce one primary failure mode where feasible.
-2. Inspect prompt, API, parsing, state and error-handling paths.
-3. Identify the likely root cause.
-4. Apply one bounded fix when the supplied environment permits it.
-5. Run basic verification on the repaired path.
-6. Return a concise handoff note with changes and remaining risks.
+- inspect the supplied code, config, and relevant logs
+- reproduce the primary failure where the environment permits it
+- isolate the cause
+- make a bounded repair
+- re-run a representative test
+- add minimal retry, idempotency, duplicate protection, or receipts when the failure actually needs them
+- return the implementation diff and verification result
 
-## Scope boundaries
+## Typical failures
 
-This is not an unlimited rebuild. It does not include guaranteed outcomes, credential or KYC bypass, legal/compliance advice, third-party service fees, or unsupported production claims. If the issue turns out to require a substantially larger rebuild, the sprint ends with a scoped diagnosis and next-step recommendation instead of silently expanding the work.
+- API / webhook timeouts and retry loops
+- duplicate external side effects
+- broken state after restart
+- malformed structured output reaching downstream code
+- Make / n8n / Python workflow edges
+- LLM step succeeds but the surrounding automation fails
 
-## Price
+## Boundary
 
-**JPY 9,800 one-time**
+This is not an unlimited rebuild. If the real cause requires a larger redesign, the sprint stops before expanding the scope. Authentication bypass, KYC/CAPTCHA bypass, third-party fees, legal/compliance decisions, and 24-hour operations are not included.
 
-[Buy the AI Automation Debug Sprint](https://buy.stripe.com/8x214meFE4wC5st7yrgEg0g)
-
-After verified payment, the intake asks for the expected vs actual behavior, one failing workflow description, reproducible inputs/logs where safe, and the access/materials required for the bounded diagnosis.
+The paid value is the reproduction, repair, and verification in the actual workflow. A prompt-only answer or architecture memo is not the deliverable.
