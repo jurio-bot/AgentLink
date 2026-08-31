@@ -1,57 +1,51 @@
-# Services by AI usage
+# Services
 
-The public work catalog is at https://paper-daemon.github.io/work.html.
+Public catalog: https://paper-daemon.github.io/work.html
 
-## Trial rule
+The public page is organized by what the customer wants done. AI usage / subscription level is only an internal pricing rule; customers do not need to classify themselves first.
 
-Trials are small real jobs, not consultation bait. If the request is narrow enough, one thing gets actually fixed/finished. If the customer continues with the same issue/project, the trial fee is credited against the main service.
+## Trials
 
-### Trials
+Trials are small real jobs, not consultation bait. When the request is narrow enough, one thing gets actually fixed or finished. If the same job continues into a larger service, the trial fee is credited.
 
-- PC diagnosis + 1 fix — ¥980 — https://book.stripe.com/7sY6oG9lk0gm6wx8CvgEg0x
-- Web 1-place fix — ¥1,480 — https://book.stripe.com/3cIcN4dBA7IOaMNdWPgEg0y
-- Spreadsheet 1-place fix — ¥980 — https://book.stripe.com/aFa6oG9lk0gm5st3ibgEg0A
-- Audio 1-file / 3-min finish — ¥980 — https://book.stripe.com/bJeeVcdBA5AG4op8CvgEg0B
-- Image 1-file finish — ¥980 — https://book.stripe.com/bJe14mcxw1kq8EF6ungEg0C
-- Video 30-sec finish — ¥1,480 — https://book.stripe.com/bJe9ASapobZ4f339GzgEg0D
-- Product page 1-item finish — ¥1,280 — https://book.stripe.com/7sYcN4bts3sy8EF1a3gEg0E
-- Automation 1-fix — ¥1,980 — https://book.stripe.com/7sY3cu7dce7caMN2e7gEg0z
+- PC diagnosis + 1 fix — ¥500 — https://book.stripe.com/aFaeVcgNMbZ4bQR1a3gEg0J
+- Web 1-place fix — ¥780 — https://book.stripe.com/dRmbJ09lkgfkaMNaKDgEg0K
+- Spreadsheet 1-place fix — ¥500 — https://book.stripe.com/6oU14m4104wC6wx7yrgEg0L
+- Audio 1-file / 3-min finish — ¥500 — https://book.stripe.com/4gM6oG4100gmdYZ6ungEg0M
+- Image 1-file finish — ¥500 — https://book.stripe.com/eVq6oG2WW5AG7AB05ZgEg0N
+- Video 30-sec finish — ¥780 — https://book.stripe.com/8x214m7dcgfk7AB05ZgEg0O
+- Product page 1-item finish — ¥780 — https://book.stripe.com/fZubJ0dBAfbg5st2e7gEg0P
+- Automation 1-fix — ¥980 — https://book.stripe.com/fZu6oG1SSaV0g777yrgEg0Q
 
-## 1. People who do not use AI
+## Fix
 
-They buy completion, not AI education.
+- Spreadsheet 1-file fix — ¥1,980 — https://book.stripe.com/dRm8wO7dc0gm6wx9GzgEg0R
+- PC troubleshooting — ¥2,980 — https://book.stripe.com/9B600i5545AG3kldWPgEg0V
+- Automation Bug Fix — ¥2,980 — https://book.stripe.com/3cI8wO0OOgfkaMN9GzgEg11
+- Small Web repair — ¥4,980 — https://book.stripe.com/4gM6oG0OOfbgaMN05ZgEg0X
 
-- Spreadsheet 1-file fix — ¥3,800 — https://book.stripe.com/cNi14m1SSfbg6wx2e7gEg0F
-- Audio 1-file finish — ¥3,800 — https://book.stripe.com/aFacN4dBA3syf335qjgEg0G
-- Image 5-file finish — ¥3,800 — https://book.stripe.com/5kQ00ieFE5AG6wxdWPgEg0H
-- Product page 1-item finish — ¥4,800 — https://book.stripe.com/4gM7sK9lk7IOdYZ6ungEg0I
-- PC troubleshooting — ¥6,800 — https://book.stripe.com/cNiaEW1SS9QWf336ungEg0o
-- Video 1-file finish — ¥7,800 — https://book.stripe.com/aFacN4btsd38dYZbOHgEg0q
-- Small Web repair — ¥9,800 — https://book.stripe.com/cNicN4cxwfbg7ABdWPgEg0p
+## Finish
 
-## 2. People who use AI but do not pay for a subscription
+- Writing finish — ¥980 — https://buy.stripe.com/4gMfZggNM3sy6wxcSLgEg0Y
+- Content pack — ¥1,480 — https://buy.stripe.com/5kQ5kC9lk9QWg77bOHgEg10
+- Audio 1-file finish — ¥1,980 — https://book.stripe.com/9B69ASbts3sy1cd6ungEg0S
+- Image 5-file finish — ¥1,980 — https://book.stripe.com/4gM00idBAe7cdYZ5qjgEg0T
+- Product page 1-item finish — ¥2,480 — https://book.stripe.com/7sYaEWapo2ou6wx3ibgEg0U
+- Video 1-file finish — ¥3,980 — https://book.stripe.com/7sYbJ07dc3sy0899GzgEg0W
 
-These are bounded one-off access products below a monthly paid-AI commitment.
+## Research / connect
 
-- Writing finish — ¥1,480 — https://buy.stripe.com/eVq00ieFEd38g771a3gEg0s
-- Web research — ¥1,980 — https://buy.stripe.com/7sY7sK2WW2oug772e7gEg0r
-- Content pack — ¥2,480 — https://buy.stripe.com/fZu7sKapo2oubQRbOHgEg0t
+- Web research — ¥1,280 — https://buy.stripe.com/eVq14m9lk5AG2gh7yrgEg0Z
+- Automation 1-Connection Setup — ¥4,980 — https://book.stripe.com/bJe3cufJIaV0cUV9GzgEg12
+- Agent / RAG Reliability Patch — ¥5,980 — https://book.stripe.com/7sY4gy1SS6EK7AB6ungEg13
 
-## 3. People who already pay for AI
+## Pricing rule
 
-Prompt-only output is not a product for this segment. Fixed-price work stays narrow and below ¥10,000. Larger work is quoted only after real scope is visible.
-
-- Automation Bug Fix — ¥4,800 — https://book.stripe.com/28EaEW410gfk6wx05ZgEg0u
-- Automation 1-Connection Setup — ¥7,800 — https://book.stripe.com/14A7sK0OO3sycUV1a3gEg0w
-- Agent / RAG Reliability Patch — ¥8,800 — https://book.stripe.com/4gM00ifJI9QW2gh9GzgEg0v
-
-## Quality rule
-
-- Never sell a paid-AI user something they can reasonably regenerate in a chat window.
-- Trials must do real work when the issue is bounded.
-- Higher prices must correspond to real files, devices, code, environments, integration, deployment, recovery, verification, or meaningful production effort.
+- The cheapest useful real trial should be easier to buy than to think about for an hour.
+- A customer who already pays for capable AI must not be sold prompt-only output.
+- Higher prices require real files, devices, code, environments, integrations, deployment, recovery, verification, or meaningful production effort.
+- Large / ambiguous jobs are quote-only after the actual scope is visible.
 - No fabricated users, reviews, adoption numbers, revenue, or performance guarantees.
-- Larger automation / multi-service integration / production rebuilds are quote-only after environment and acceptance conditions are known.
 
 ## Public engineering proof
 
