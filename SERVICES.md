@@ -2,6 +2,25 @@
 
 The catalog is split by the customer's starting point. The same deliverable can have very different value depending on whether the customer uses AI at all, uses only free AI, or already pays for a capable model.
 
+## Trials
+
+Trials are not consultation-only products. If the issue is narrow enough, they include one real fix. When the customer continues with the same issue or project, the trial fee is deducted from the main service price.
+
+### PCおためし診断・1修正 — ¥980
+Checkout: https://book.stripe.com/7sY6oG9lk0gm6wx8CvgEg0x
+
+One concrete Windows/Linux symptom. Inspect it and, when the cause is narrow enough, apply one safe settings/software fix and verify the basic result.
+
+### Webおためし1か所修正 — ¥1,480
+Checkout: https://book.stripe.com/3cIcN4dBA7IOaMNdWPgEg0y
+
+One visible issue on a small site. Reproduce it and, when it is bounded, make one HTML/CSS/JavaScript or publishing-settings fix and verify the page.
+
+### Automationおためし1件修正 — ¥1,980
+Checkout: https://book.stripe.com/7sY3cu7dce7caMN2e7gEg0z
+
+One reproducible automation/AI-flow problem. If the cause is narrow, make one small code/configuration fix and run a representative check.
+
 ## 1. For people who do not use AI
 
 ### PCトラブル解決スプリント — ¥6,800
@@ -63,6 +82,7 @@ No fixed ¥30,000 AI checkout. Larger automation, multi-service integration, pro
 
 ## Quality rule
 
+- Trials must include real work when the issue is bounded; diagnosis-only bait is not the goal.
 - AI non-users buy completion, not AI education.
 - Free-AI users can buy one-off access below a monthly-subscription-sized commitment.
 - Paid-AI users are never sold something they can reasonably regenerate in a chat window.
