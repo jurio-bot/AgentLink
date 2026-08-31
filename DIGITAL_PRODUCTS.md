@@ -1,13 +1,24 @@
-# Digital Products
+# Products
 
 There are currently **no paid downloadable template packs** in the public AgentLink catalog.
 
-The previous checklist, planning-sheet, handoff-template, research-log, spreadsheet-QA, and freelance-tracker products have been retired from sale.
+The old checklist, planning-sheet, handoff-template, research-log, spreadsheet-QA, and freelance-tracker downloads remain retired. A normal PC user with a capable paid AI should not be charged for something they can reasonably regenerate with a few prompts.
 
-Reason: if a normal PC user with ChatGPT Plus can reasonably generate an equivalent artifact with a few prompts, it is not strong enough to be a paid AgentLink product.
+Instead, the catalog now uses **fixed-scope service products** and splits them by customer starting point:
 
-Free documentation and small utilities may still exist as supporting material, but they are not positioned as premium products or headline proof.
+1. **AIを使ってない** — done-for-you PC / Web / media work. The customer buys completion and does not need to learn AI.
+2. **AIは使うけど課金してない** — one-off paid-AI tickets under ¥3,000 for research, writing, and content work. The customer pays once instead of taking on a monthly AI subscription.
+3. **AIに課金してる** — hands-on engineering only: debugging, reliability hardening, deployment, integration, and verified execution in real environments.
 
-Paid work is limited to hands-on implementation where value comes from the real environment: reproducing failures, changing actual code/configuration, connecting services, deploying, testing, hardening recovery, and handing back a verified working state.
+This segmentation is intentional. The exact same generated artifact can be valuable to someone without paid AI and nearly worthless as a product to someone who already has it.
 
-See [SERVICES.md](./SERVICES.md) for the current paid work.
+## Quality rule
+
+A new paid SKU must pass at least one of these tests:
+
+- the customer does not have the tool/capability and wants a bounded one-off result at a price below a recurring commitment; or
+- value comes from real files, devices, code, environments, integrations, deployment, testing, recovery, or meaningful production work.
+
+We do not create paid SKUs just because something can be generated quickly. Public quantity is not the goal.
+
+See [SERVICES.md](./SERVICES.md) for current fixed-scope products and checkout links.
