@@ -42,14 +42,14 @@ The goal is not to replace foundation models. The goal is to make them more usef
 
 The public repository contains deliberately bounded demonstrations, documentation and case studies rather than the production runtime.
 
-- **[Receipt Replay Simulator](./demos/receipt-replay-simulator/)** — demonstrates conservative recovery for completed, not-started and uncertain actions
-- **[Site Surface Doctor proof](./PUBLIC_PROOF_SITE_SURFACE_DOCTOR.md)** — static/repository preflight evidence covering responsive `srcset`, local video/audio/frame/poster assets, path boundaries, sitemap checks, strict-by-default cross-repo Pages prefix handling, and incomplete standard MIT text when a license explicitly identifies itself as MIT, with CI-backed regressions
-- **[RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md)** — isolated agent configuration, routing, validation, health reporting and an automated test suite
+- **[Receipt Replay Simulator](./demos/receipt-replay-simulator/)** — conservative recovery for completed, not-started and uncertain actions
+- **[Site Surface Doctor proof](./PUBLIC_PROOF_SITE_SURFACE_DOCTOR.md)** — CI-backed public-surface checks
+- **[RAG Fleet Harness MVP case study](./CASE_STUDY_RAG_FLEET.md)** — isolated agent configuration, routing, validation, health reporting and automated tests
 - **[Architecture notes](./ARCHITECTURE.md)** — execution-layer design and boundaries
-- **[Technical proofs](./TECHNICAL_PROOFS.md)** — public evidence for selected implementation claims
+- **[Technical proofs](./TECHNICAL_PROOFS.md)** — evidence for selected implementation claims
 - **[Security boundary](./SECURITY.md)** — what is intentionally not exposed
 
-Public claims should be backed by implementation evidence, tests, receipts, or a reproducible demo. If evidence is not available, the claim should stay narrow.
+Public claims should be backed by implementation evidence, tests, receipts, or a reproducible demo. A tiny tool that can be regenerated from a few prompts is not treated as headline proof merely because it exists.
 
 ## Current engineering directions
 
@@ -83,29 +83,36 @@ This is why AgentLink treats checkpoints, idempotency keys, effect receipts and 
 
 ## AI-native Company OS thesis
 
-AgentLink is also used as an internal operating substrate for AI workers. The goal is to test the execution model under real workloads before turning selected capabilities into reusable products or services.
-
-A Company OS lane can own durable work, hand bounded tasks to child workers, collect evidence, survive thread or browser loss, and continue from state instead of relying on one conversation URL.
+AgentLink is also used as an internal operating substrate for AI workers. A Company OS lane can own durable work, hand bounded tasks to child workers, collect evidence, survive thread or browser loss, and continue from state instead of relying on one conversation URL.
 
 Human operators remain responsible for legal accountability, governance, sensitive approvals, identity-bound actions and other authority that should not be delegated.
 
-## Open tools and practical packs
+## Public release bar
 
-Selected small tools and workflow packs are published separately when they are useful outside the private AgentLink runtime.
+Not every internal helper needs its own public repository. Public work should earn its place by showing at least one of these:
 
-- [Public tools / portfolio](https://paper-daemon.github.io/portfolio/)
-- [Finder hub](https://paper-daemon.github.io/finders.html)
-- [Service scopes](./SERVICES.md)
-- [Digital products](./DIGITAL_PRODUCTS.md)
-- [Free AI Automation Readiness Checklist](./FREE_AI_AUTOMATION_READINESS_CHECKLIST.md)
+- real multi-system integration
+- continued use in an actual operating workflow
+- non-trivial failure handling or recovery
+- meaningful test / CI evidence
+- a reproducible system-level demo
+- implementation depth that is not reasonably replaced by a few generic model prompts
 
-The public catalog includes ordinary CSV, subtitle, repository-health, automation-safety and creator-workflow tools as well as AI-agent material. Small tools can stay small, but they should have a clear purpose, usable instructions, explicit boundaries and a reproducible verification path when applicable.
+Small experiments can be folded into a larger project, kept internal, or used as fixtures instead of being promoted as standalone work.
 
-## Paid engineering scope
+## Paid engineering
 
-Paid work is kept separate from technical claims. Current scopes are listed in **[SERVICES.md](./SERVICES.md)** and may include narrow automation reviews, reliability / recovery reviews, RAG / agent architecture work and bounded proof-of-concept implementation.
+Paid work follows the same rule. We do **not** sell generic prompt output, planning templates, one-file cleanup, or review-only documents as premium engineering.
 
-Fixed-price offers define what is included and excluded. Larger work requires scope confirmation before implementation. Payment does not turn an experimental capability into a production guarantee.
+Current fixed scopes in **[SERVICES.md](./SERVICES.md)** are hands-on:
+
+- reproduce and repair an existing automation failure
+- harden an existing Agent / RAG flow and test failure paths
+- deploy one real automation workflow into the target environment and verify it
+
+The value is in changing and validating the actual system, not in producing a longer answer than a general-purpose AI subscription can.
+
+There are currently no paid downloadable template packs. See **[DIGITAL_PRODUCTS.md](./DIGITAL_PRODUCTS.md)**.
 
 ## R&D themes
 
@@ -135,11 +142,11 @@ See [SECURITY.md](./SECURITY.md).
 
 ## Current stage
 
-AgentLink is an early-stage platform and R&D project. Current priorities include repeatable onboarding, reliability measurement, security hardening, bounded commercial use cases, public proof quality and clearer separation between experimental research and stable reusable tools.
+AgentLink is an early-stage platform and R&D project. Current priorities include reliability measurement, security hardening, real-environment automation, failure recovery, and a higher bar for what deserves to be published or sold.
 
 ## Support and collaboration
 
-For a non-confidential engineering inquiry, design-partner discussion, technical collaboration or project support, use the public service/contact surfaces linked above or open a GitHub Issue where appropriate.
+For a non-confidential engineering inquiry, use [SERVICES.md](./SERVICES.md) or the public contact surfaces on https://paper-daemon.github.io/.
 
 Do not post credentials, API keys, personal data, proprietary datasets or other confidential information in a public issue.
 
