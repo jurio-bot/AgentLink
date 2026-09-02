@@ -1,5 +1,7 @@
 # AgentLink
 
+[![Full Python suite](https://github.com/paper-daemon/AgentLink/actions/workflows/full-python-suite.yml/badge.svg)](https://github.com/paper-daemon/AgentLink/actions/workflows/full-python-suite.yml)
+
 **Persistent, permissioned, recoverable execution infrastructure for long-running AI workers.**
 
 AgentLink explores the execution layer between AI reasoning and real operational work: keeping jobs alive across interruptions, bounding authority, coordinating workers, avoiding duplicate external side effects, and leaving enough evidence to recover safely.
